@@ -6,6 +6,7 @@
       paths = [
         direnv
         docker-compose
+        ghcid
         google-chrome
         stack
       ];
