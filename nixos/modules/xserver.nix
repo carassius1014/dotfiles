@@ -13,9 +13,7 @@
     displayManager = {
       lightdm = {
         enable = true;
-        greeter.enable = false;
-        autoLogin.enable = true;
-        autoLogin.user = "carassius1014";
+        greeter.enable = true;
       };
     };
     windowManager = {
