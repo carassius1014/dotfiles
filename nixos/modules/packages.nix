@@ -4,5 +4,6 @@
     emacs
     git
     gnumake
+    rxvt_unicode
   ];
 }
