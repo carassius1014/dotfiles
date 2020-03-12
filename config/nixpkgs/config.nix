@@ -5,6 +5,7 @@
       name = "my-packages";
       paths = [
         direnv
+        docker-compose
         google-chrome
         stack
       ];
