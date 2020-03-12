@@ -3,5 +3,6 @@
 
 !*/
 !fish/**
+!i3/**
 !nixpkgs/**
 !polybar/**
