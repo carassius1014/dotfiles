@@ -9,7 +9,6 @@
 (require 'prelude-use-package)
 
 (require 'prelude-better-defaults)
-(require 'prelude-path)
 (require 'prelude-macos)
 
 (require 'prelude-frame)
