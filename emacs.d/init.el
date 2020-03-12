@@ -30,6 +30,7 @@
 
 (require 'prelude-emacs-lisp)
 (require 'prelude-fish)
+(require 'prelude-haskell)
 (require 'prelude-nix)
 
 (provide 'init)
