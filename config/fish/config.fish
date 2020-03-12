@@ -3,8 +3,8 @@
 #################
 
 # direnv
-# set -x EDITOR emacs
-# eval (direnv hook fish)
+set -x EDITOR emacs
+eval (direnv hook fish)
 
 ########################
 # - MACHINE SPECIFIC - #

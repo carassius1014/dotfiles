@@ -1,9 +1,10 @@
 {
   allowUnfree = true;
   packageOverrides = pkgs: with pkgs; {
-    carassius1014Packages = pkgs.buildEnv {
-      name = "carassius1014-packages";
+    myPackages = pkgs.buildEnv {
+      name = "my-packages";
       paths = [
+        direnv
         google-chrome
         stack
       ];
