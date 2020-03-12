@@ -25,6 +25,7 @@
 (require 'prelude-company)
 (require 'prelude-which-key)
 (require 'prelude-undo-tree)
+(require 'prelude-editorconfig)
 
 (require 'prelude-magit)
 
