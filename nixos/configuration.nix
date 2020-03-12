@@ -7,6 +7,7 @@
 
       ./modules/audio.nix
       ./modules/boot.nix
+      ./modules/docker.nix
       ./modules/firewall.nix
       ./modules/fonts.nix
       ./modules/i18n.nix
@@ -19,4 +20,3 @@
       ./modules/xserver.nix
     ];
 }
-
