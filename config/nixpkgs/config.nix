@@ -1,8 +1,13 @@
 {
   allowUnfree = true;
   packageOverrides = pkgs: with pkgs; {
-    myPackages = pkgs.buildEnv {
-      name = "my-packages";
+    macosPackages = pkgs.buildEnv {
+      name = "macos-packages";
+      paths = [
+      ];
+    };
+    nixosPackages = pkgs.buildEnv {
+      name = "nixos-packages";
       paths = [
         direnv
         docker-compose

@@ -1,3 +1,8 @@
 function nix-load-packages
-  nix-env -f "<nixpkgs>" -iA myPackages
+  switch (uname)
+    case Darwin
+      nix-env -f "<nixpkgs>" -iA macosPackages
+    case Linux
+      nix-env -f "<nixpkgs>" -iA nixosPackages
+  end
 end
