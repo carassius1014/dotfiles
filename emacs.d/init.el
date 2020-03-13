@@ -8,6 +8,8 @@
 (require 'prelude-repository)
 (require 'prelude-use-package)
 
+(require 'prelude-preload-local)
+
 (require 'prelude-better-defaults)
 (require 'prelude-macos)
 
