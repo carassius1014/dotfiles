@@ -20,6 +20,7 @@
 (require 'prelude-projectile)
 (require 'prelude-awesome-tab)
 
+(require 'prelude-dired)
 (require 'prelude-evil)
 (require 'prelude-ivy)
 (require 'prelude-flycheck)
