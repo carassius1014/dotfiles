@@ -5,6 +5,7 @@
     git
     gnumake
     lsof
+    lxqt.pavucontrol-qt
     rxvt_unicode
   ];
 }
