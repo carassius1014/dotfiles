@@ -18,6 +18,7 @@
 (require 'prelude-dashboard)
 (require 'prelude-neotree)
 (require 'prelude-projectile)
+(require 'prelude-awesome-tab)
 
 (require 'prelude-evil)
 (require 'prelude-ivy)
