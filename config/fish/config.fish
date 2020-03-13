@@ -16,7 +16,7 @@ switch (uname)
 
     set -g fish_user_paths /usr/local/sbin $fish_user_paths
 
-    bass source /Users/carassius1014/.nix-profile/etc/profile.d/nix.sh
+    bass source /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh
 
   case Linux
 
