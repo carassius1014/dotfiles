@@ -1,4 +1,4 @@
-function nix-load-packages
+function nix-reload-packages
   switch (uname)
     case Darwin
       nix-env -f "<nixpkgs>" -iA macosPackages
