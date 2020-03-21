@@ -1,12 +1,15 @@
+let
+  nixpkgs = import ./channels/nixos.nix ;
+in
 {
   allowUnfree = true;
-  packageOverrides = pkgs: with pkgs; {
+  packageOverrides = pkgs: {
     macosPackages = pkgs.buildEnv {
       name = "macos-packages";
       paths = [
       ];
     };
-    nixosPackages = pkgs.buildEnv {
+    nixosPackages = with nixpkgs; buildEnv {
       name = "nixos-packages";
       paths = [
         direnv
