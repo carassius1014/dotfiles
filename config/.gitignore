@@ -2,6 +2,7 @@
 !.gitignore
 
 !*/
+!brittany/**
 !fish/**
 !i3/**
 !nitrogen/**
