@@ -16,6 +16,7 @@ in
         docker-compose
         ghcid
         google-chrome
+        haskellPackages.hoogle
         stack
       ];
     };
