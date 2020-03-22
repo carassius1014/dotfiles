@@ -38,6 +38,7 @@
 (require 'prelude-fish)
 (require 'prelude-haskell)
 (require 'prelude-nix)
+(require 'prelude-ruby)
 (require 'prelude-yaml)
 
 (provide 'init)
