@@ -7,6 +7,7 @@
     lsof
     lxqt.pavucontrol-qt
     nitrogen
+    ruby
     rxvt_unicode
   ];
 }
