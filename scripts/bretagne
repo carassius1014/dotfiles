@@ -1,0 +1,22 @@
+#!/usr/bin/env ruby
+
+CONFIG_FILE = "#{Dir.home}/.dotfiles/config/brittany/config.yaml"
+
+def in_global_project?
+  `stack path | grep "project-root"`
+    .include?('.dotfiles/stack/global-project')
+end
+
+def targets
+  `find . -name '*.hs' | grep -v '.stack-work'`
+    .lines
+    .map { |x| x.strip }
+end
+
+def main
+  exit if in_global_project?
+  exit if targets.size == 0
+  `brittany --config-file #{CONFIG_FILE} --write-mode=inplace #{targets.join(' ')}`
+end
+
+main
