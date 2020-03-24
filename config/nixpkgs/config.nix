@@ -19,6 +19,7 @@ in
         haskellPackages.brittany
         haskellPackages.hoogle
         stack
+        yarn
       ];
     };
   };
