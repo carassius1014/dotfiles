@@ -37,6 +37,7 @@
 (require 'prelude-emacs-lisp)
 (require 'prelude-fish)
 (require 'prelude-haskell)
+(require 'prelude-javascript)
 (require 'prelude-nix)
 (require 'prelude-ruby)
 (require 'prelude-yaml)
