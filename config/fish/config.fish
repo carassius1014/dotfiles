@@ -6,6 +6,9 @@
 set -x EDITOR emacs
 eval (direnv hook fish)
 
+# node
+set PATH ./node_modules/.bin $PATH
+
 ########################
 # - MACHINE SPECIFIC - #
 ########################
