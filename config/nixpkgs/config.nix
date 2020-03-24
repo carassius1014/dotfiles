@@ -18,6 +18,7 @@ in
         google-chrome
         haskellPackages.brittany
         haskellPackages.hoogle
+        nodejs
         stack
         yarn
       ];
