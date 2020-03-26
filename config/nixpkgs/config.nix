@@ -23,6 +23,7 @@ in
         stack
         unzip
         wine
+        winetricks
         yarn
       ];
     };
