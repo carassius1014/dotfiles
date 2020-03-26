@@ -1,3 +1,7 @@
+!!!!!!!!!!!!!!!!!!
+!! rxvt unicode !!
+!!!!!!!!!!!!!!!!!!
+
 !!                           Colorscheme
 
 !                            special
@@ -56,3 +60,10 @@ URxvt.scrollBar_right:       false
 URxvt.urgentOnBell:          true
 URxvt.depth:                 24
 URxvt.iso14755:              false
+
+!!!!!!!!!!
+!! rofi !!
+!!!!!!!!!!
+
+rofi.run-command: fish -c '{cmd}'
+rofi.run-list-command: 'fish -c functions'
