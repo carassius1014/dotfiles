@@ -1,0 +1,14 @@
+#!/usr/bin/env ruby
+
+require_relative 'prelude'
+
+def main
+  ensure_args(1)
+  ensure_bin("wine")
+  exe_name = ARGV[0]
+  exe = "#{Dir.home}/Wine/#{exe_name}/#{exe_name}.exe"
+  ensure_path(exe)
+  `wine #{exe}`
+end
+
+main
