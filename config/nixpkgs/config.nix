@@ -22,6 +22,7 @@ in
         nodejs
         stack
         unzip
+        wine
         yarn
       ];
     };
