@@ -34,6 +34,7 @@
 
 (require 'prelude-magit)
 
+(require 'prelude-coq)
 (require 'prelude-emacs-lisp)
 (require 'prelude-fish)
 (require 'prelude-haskell)
