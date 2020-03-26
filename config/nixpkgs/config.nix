@@ -12,6 +12,7 @@ in
     nixosPackages = with nixpkgs; buildEnv {
       name = "nixos-packages";
       paths = [
+        coq
         direnv
         docker-compose
         ghcid
