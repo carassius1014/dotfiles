@@ -21,6 +21,7 @@ in
         haskellPackages.hoogle
         nodejs
         stack
+        unzip
         yarn
       ];
     };
