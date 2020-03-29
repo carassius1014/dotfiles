@@ -4,9 +4,13 @@ in
 {
   allowUnfree = true;
   packageOverrides = pkgs: {
-    macosPackages = pkgs.buildEnv {
+    macosPackages = with nixpkgs; buildEnv {
       name = "macos-packages";
       paths = [
+        stack
+        ghcid
+        haskellPackages.brittany
+        haskellPackages.hoogle
       ];
     };
     nixosPackages = with nixpkgs; buildEnv {
