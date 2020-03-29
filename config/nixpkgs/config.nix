@@ -7,6 +7,7 @@ in
     macosPackages = with nixpkgs; buildEnv {
       name = "macos-packages";
       paths = [
+        coq
         stack
         ghcid
         haskellPackages.brittany
