@@ -20,6 +20,7 @@ in
         coq
         direnv
         docker-compose
+        evince
         ghcid
         google-chrome
         haskellPackages.brittany
