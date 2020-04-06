@@ -25,6 +25,7 @@ in
         google-chrome
         haskellPackages.brittany
         haskellPackages.hoogle
+        musescore
         nodejs
         stack
         unzip
