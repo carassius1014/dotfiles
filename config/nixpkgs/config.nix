@@ -23,6 +23,7 @@ in
         evince
         ghcid
         google-chrome
+        graphviz
         haskellPackages.brittany
         haskellPackages.hoogle
         musescore
