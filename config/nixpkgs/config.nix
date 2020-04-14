@@ -1,11 +1,13 @@
 let
-  nixos = import ./channels/nixos.nix ;
+  darwin = import ./channels/darwin.nix;
+  nixos = import ./channels/nixos.nix;
+  nixpkgs = import ./channels/nixpkgs.nix;
 in
 {
   allowUnfree = true;
   packageOverrides = pkgs: {
-    macosPackages = with nixos; buildEnv {
-      name = "macos-packages";
+    commonPackages = with nixpkgs; buildEnv {
+      name = "common-packages";
       paths = [
         coq
         ghcid
@@ -14,21 +16,23 @@ in
         stack
       ];
     };
+    macosPackages = with darwin; buildEnv {
+      name = "macos-packages";
+      paths = [
+      ];
+    };
     nixosPackages = with nixos; buildEnv {
       name = "nixos-packages";
       paths = [
-        coq
+        awscli
         direnv
         docker-compose
         evince
-        ghcid
         google-chrome
         graphviz
-        haskellPackages.brittany
-        haskellPackages.hoogle
         musescore
         nodejs
-        stack
+        saml2aws
         unzip
         wine
         winetricks
