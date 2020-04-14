@@ -13,6 +13,7 @@ in
         ghcid
         haskellPackages.brittany
         haskellPackages.hoogle
+        hugo
         stack
       ];
     };
