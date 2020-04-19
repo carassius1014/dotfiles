@@ -15,6 +15,7 @@ in
         haskellPackages.hoogle
         hugo
         stack
+        tree
       ];
     };
     macosPackages = with darwin; buildEnv {
