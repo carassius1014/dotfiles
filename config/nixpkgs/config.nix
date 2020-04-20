@@ -11,8 +11,6 @@ in
       paths = [
         coq
         ghcid
-        haskellPackages.brittany
-        haskellPackages.hoogle
         hugo
         stack
         tree
@@ -32,6 +30,8 @@ in
         evince
         google-chrome
         graphviz
+        haskellPackages.brittany
+        haskellPackages.hoogle
         musescore
         nodejs
         saml2aws
