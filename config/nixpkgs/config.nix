@@ -35,6 +35,7 @@ in
         musescore
         nodejs
         saml2aws
+        texlive.combined.scheme-full
         unzip
         wine
         winetricks
