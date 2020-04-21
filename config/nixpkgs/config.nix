@@ -12,6 +12,7 @@ in
         coq
         ghcid
         hugo
+        python37Packages.pygments
         stack
         tree
       ];
