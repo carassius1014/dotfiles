@@ -12,6 +12,7 @@ in
         coq
         ghcid
         hugo
+        multimarkdown
         python37Packages.pygments
         stack
         tree
