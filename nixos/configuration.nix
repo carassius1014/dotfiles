@@ -7,6 +7,7 @@
 
       ./modules/audio.nix
       ./modules/boot.nix
+      ./modules/console.nix
       ./modules/docker.nix
       ./modules/firewall.nix
       ./modules/fonts.nix

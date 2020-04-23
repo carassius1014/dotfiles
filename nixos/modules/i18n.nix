@@ -2,14 +2,14 @@
 
 {
   # Select internationalisation properties.
+
   i18n = {
-    consoleKeyMap = "us";
     defaultLocale = "en_US.UTF-8";
     inputMethod = {
       enabled = "fcitx";
       fcitx.engines = with pkgs.fcitx-engines; [
         libpinyin
-	mozc
+	      mozc
       ];
     };
   };
