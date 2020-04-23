@@ -1,7 +1,8 @@
 let
-  nixpkgs = builtins.fetchTarball {
-    name = "nixos-19.09";
-    url = "https://github.com/NixOS/nixpkgs/archive/19.09.tar.gz";
-    sha256 = "0mhqhq21y5vrr1f30qd2bvydv4bbbslvyzclhw0kdxmkgg3z4c92";
+  nixpkgs = builtins.fetchGit {
+    name = "nixos-20.03";
+    url = "https://github.com/nixos/nixpkgs-channels/";
+    ref = "refs/heads/nixos-20.03";
+    rev = "95b9c99f6d091273572ff1ec62b97b6ad3f68bdf";
   };
 in import nixpkgs { }
