@@ -14,6 +14,7 @@ in
         hugo
         multimarkdown
         python37Packages.pygments
+        ormolu
         stack
         tree
       ];
