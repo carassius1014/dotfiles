@@ -42,10 +42,10 @@
 *.color15:                   #fdf6e3
 
 !!                           URxvt Appearance
-URxvt.font:                  xft:Fira Code:style=Regular:size=13
-URxvt.boldFont:              xft:Fira Code:style=Bold:size=13
-URxvt.italicFont:            xft:Fira Code:style=Light:size=13
-URxvt.boldItalicfont:        xft:Fira Code:style=Medium:size=13
+URxvt.font:                  xft:Sarasa Mono CL:style=Regular:size=14
+URxvt.boldFont:              xft:Sarasa Mono CL:style=Bold:size=14
+URxvt.italicFont:            xft:Sarasa Mono CL:style=Light:size=14
+URxvt.boldItalicfont:        xft:Sarasa Mono CL:style=Medium:size=14
 URxvt.transparent:           true
 URxvt.shading:               20
 URxvt.letterSpace:           0
