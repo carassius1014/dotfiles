@@ -17,4 +17,7 @@
   (interactive)
   (setq haskell-stylish-on-save nil))
 
+(add-to-list 'auto-mode-alist '("\\.x\\'" . fundamental-mode))
+(add-to-list 'auto-mode-alist '("\\.y\\'" . fundamental-mode))
+
 (provide 'prelude-haskell)
