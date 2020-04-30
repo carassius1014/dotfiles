@@ -22,6 +22,7 @@ in
     macosPackages = with darwin; buildEnv {
       name = "macos-packages";
       paths = [
+        haskellPackages.hoogle
       ];
     };
     nixosPackages = with nixos; buildEnv {
