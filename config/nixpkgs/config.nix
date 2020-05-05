@@ -43,6 +43,7 @@ in
         haskellPackages.hoogle
         musescore
         nodejs
+        openjdk
         saml2aws
         texlive.combined.scheme-full
         unzip
