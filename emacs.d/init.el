@@ -41,6 +41,7 @@
 (require 'prelude-javascript)
 (require 'prelude-markdown)
 (require 'prelude-nix)
+(require 'prelude-ocaml)
 (require 'prelude-ruby)
 (require 'prelude-tex)
 (require 'prelude-yaml)
