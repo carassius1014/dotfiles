@@ -37,6 +37,7 @@
 (require 'prelude-coq)
 (require 'prelude-emacs-lisp)
 (require 'prelude-fish)
+(require 'prelude-fstar)
 (require 'prelude-haskell)
 (require 'prelude-javascript)
 (require 'prelude-markdown)
