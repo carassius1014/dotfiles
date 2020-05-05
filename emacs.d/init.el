@@ -57,7 +57,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (auctex markdown-mode yaml-mode doom-modeline flycheck nix-mode editorconfig projectile neotree all-the-icons-dired all-the-icons-ivy all-the-icons which-key exec-path-from-shell evil-magit magit dashboard company counsel evil doom-themes use-package))))
+    (fstar-mode auctex markdown-mode yaml-mode doom-modeline flycheck nix-mode editorconfig projectile neotree all-the-icons-dired all-the-icons-ivy all-the-icons which-key exec-path-from-shell evil-magit magit dashboard company counsel evil doom-themes use-package))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
