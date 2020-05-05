@@ -11,12 +11,17 @@ in
       paths = [
         coq
         ghcid
+        fstar
         hugo
         multimarkdown
         python37Packages.pygments
+        ocaml
+        ocamlPackages.dune
+        ocamlPackages.utop
         ormolu
         stack
         tree
+        z3
       ];
     };
     macosPackages = with darwin; buildEnv {
