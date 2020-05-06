@@ -13,6 +13,7 @@ in
         ghcid
         fstar
         hugo
+        idris
         multimarkdown
         python37Packages.pygments
         ocaml
