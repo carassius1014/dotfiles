@@ -39,6 +39,7 @@
 (require 'prelude-fish)
 (require 'prelude-fstar)
 (require 'prelude-haskell)
+(require 'prelude-idris)
 (require 'prelude-javascript)
 (require 'prelude-markdown)
 (require 'prelude-nix)
