@@ -4,7 +4,6 @@
   :ensure t
   :mode (("\\.hs\\'" . haskell-mode))
   :config
-  (setq haskell-font-lock-symbols t)
   (add-hook 'haskell-mode-hook 'haskell-auto-insert-module-template)
   (setq haskell-stylish-on-save nil)
   (setq haskell-mode-stylish-haskell-path "ormolu"))
