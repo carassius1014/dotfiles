@@ -9,9 +9,12 @@ in
     commonPackages = with nixpkgs; buildEnv {
       name = "common-packages";
       paths = [
+        awscli
         coq
+        direnv
         ghcid
         fstar
+        haskellPackages.hoogle
         hugo
         idris
         multimarkdown
@@ -20,6 +23,7 @@ in
         ocamlPackages.dune
         ocamlPackages.utop
         ormolu
+        saml2aws
         stack
         tree
         z3
@@ -28,24 +32,19 @@ in
     macosPackages = with darwin; buildEnv {
       name = "macos-packages";
       paths = [
-        haskellPackages.hoogle
       ];
     };
     nixosPackages = with nixos; buildEnv {
       name = "nixos-packages";
       paths = [
-        awscli
-        direnv
         docker-compose
         evince
         google-chrome
         graphviz
         haskellPackages.brittany
-        haskellPackages.hoogle
         musescore
         nodejs
         openjdk
-        saml2aws
         texlive.combined.scheme-full
         unzip
         wine
