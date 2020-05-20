@@ -1,14 +1,3 @@
-#################
-# - UNIVERSAL - #
-#################
-
-# direnv
-set -x EDITOR emacs
-eval (direnv hook fish)
-
-# node
-set PATH ./node_modules/.bin $PATH
-
 ########################
 # - MACHINE SPECIFIC - #
 ########################
@@ -24,3 +13,14 @@ switch (uname)
   case Linux
 
 end
+
+#################
+# - UNIVERSAL - #
+#################
+
+# direnv
+set -x EDITOR emacs
+eval (direnv hook fish)
+
+# node
+set PATH ./node_modules/.bin $PATH
