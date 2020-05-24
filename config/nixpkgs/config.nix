@@ -24,6 +24,7 @@ in
         ocamlPackages.utop
         ormolu
         saml2aws
+        shadowsocks-libev
         stack
         tree
         z3
