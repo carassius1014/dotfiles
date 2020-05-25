@@ -12,6 +12,7 @@
       ./modules/firewall.nix
       ./modules/fonts.nix
       ./modules/i18n.nix
+      ./modules/liveshare.nix
       ./modules/network.nix
       ./modules/packages.nix
       ./modules/ssh.nix
