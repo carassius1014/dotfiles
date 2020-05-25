@@ -48,6 +48,7 @@ in
         openjdk
         texlive.combined.scheme-full
         unzip
+        vscode
         wine
         winetricks
         yarn
