@@ -24,3 +24,7 @@ eval (direnv hook fish)
 
 # node
 set PATH ./node_modules/.bin $PATH
+
+# doom emacs
+set PATH $HOME/.emacs.d/bin $PATH
+
