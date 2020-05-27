@@ -13,6 +13,7 @@ in
         coq
         direnv
         ghcid
+        fd
         fstar
         haskellPackages.hoogle
         hugo
@@ -23,8 +24,10 @@ in
         ocamlPackages.dune
         ocamlPackages.utop
         ormolu
+        ripgrep
         saml2aws
         shadowsocks-libev
+        shellcheck
         stack
         tree
         z3
