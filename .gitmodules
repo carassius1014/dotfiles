@@ -1,6 +1,0 @@
-[submodule "emacs.d/repositories/awesome-tab"]
-	path = emacs.d/repositories/awesome-tab
-	url = https://github.com/manateelazycat/awesome-tab.git
-[submodule "emacs.d/repositories/dired-plus"]
-	path = emacs.d/repositories/dired-plus
-	url = https://github.com/emacsmirror/dired-plus.git
