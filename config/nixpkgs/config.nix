@@ -19,7 +19,6 @@ in {
           hugo
           idris
           multimarkdown
-          python37Packages.pygments
           ocaml
           ocamlPackages.merlin
           ocamlPackages.dune
@@ -27,6 +26,7 @@ in {
           ocamlPackages.utop
           ormolu
           python38Packages.editorconfig
+          python38Packages.pygments
           ripgrep
           saml2aws
           shadowsocks-libev
