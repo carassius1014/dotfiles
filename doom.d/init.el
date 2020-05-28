@@ -5,9 +5,8 @@
        ivy
 
        :ui
+       dashboard
        doom
-       doom-dashboard
-       doom-quit
        hl-todo
        modeline
        ophints
@@ -27,7 +26,7 @@
        snippets
 
        :emacs
-       dired
+       dired+
        electric
        ibuffer
        undo
@@ -48,6 +47,7 @@
 
        :lang
        emacs-lisp
+       haskell
        json
        markdown
        org
