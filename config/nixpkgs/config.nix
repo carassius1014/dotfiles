@@ -24,6 +24,7 @@ in
         ocamlPackages.dune
         ocamlPackages.utop
         ormolu
+        python38Packages.editorconfig
         ripgrep
         saml2aws
         shadowsocks-libev
