@@ -50,6 +50,7 @@
        haskell
        javascript
        json
+       latex
        markdown
        nix
        ocaml
