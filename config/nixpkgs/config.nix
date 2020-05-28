@@ -39,7 +39,9 @@ in {
     macosPackages = with darwin;
       buildEnv {
         name = "macos-packages";
-        paths = [ ];
+        paths = [
+          nixfmt
+        ];
       };
     nixosPackages = with nixos;
       buildEnv {
