@@ -21,7 +21,9 @@ in
         multimarkdown
         python37Packages.pygments
         ocaml
+        ocamlPackages.merlin
         ocamlPackages.dune
+        ocamlPackages.ocp-indent
         ocamlPackages.utop
         ormolu
         python38Packages.editorconfig
