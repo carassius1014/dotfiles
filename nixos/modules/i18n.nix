@@ -7,10 +7,7 @@
     defaultLocale = "en_US.UTF-8";
     inputMethod = {
       enabled = "fcitx";
-      fcitx.engines = with pkgs.fcitx-engines; [
-        libpinyin
-	      mozc
-      ];
+      fcitx.engines = with pkgs.fcitx-engines; [ libpinyin mozc ];
     };
   };
 

@@ -6,6 +6,7 @@
   services.vsliveshare = {
     enable = true;
     extensionsDir = "$HOME/.vscode/extensions";
-    nixpkgs = fetchTarball "https://github.com/NixOS/nixpkgs/tarball/61cc1f0dc07c2f786e0acfd07444548486f4153b";
+    nixpkgs = fetchTarball
+      "https://github.com/NixOS/nixpkgs/tarball/61cc1f0dc07c2f786e0acfd07444548486f4153b";
   };
 }

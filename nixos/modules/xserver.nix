@@ -6,9 +6,7 @@
     enable = true;
     layout = "us";
     xkbOptions = "eurosign:e";
-    desktopManager = {
-      xterm.enable = false;
-    };
+    desktopManager = { xterm.enable = false; };
     displayManager = {
       defaultSession = "none+i3";
       lightdm = {

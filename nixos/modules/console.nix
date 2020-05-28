@@ -1,3 +1,1 @@
-{
-  console.keyMap = "us";
-}
+{ console.keyMap = "us"; }
