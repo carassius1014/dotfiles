@@ -48,8 +48,10 @@
        :lang
        emacs-lisp
        haskell
+       javascript
        json
        markdown
+       ocaml
        org
        sh
        yaml
