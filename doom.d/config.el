@@ -3,6 +3,7 @@
 (load! "config/evil")
 (load! "config/flycheck")
 (load! "config/fonts")
+(load! "config/indents")
 (load! "config/keybinds")
 (load! "config/projectile")
 (load! "config/tabs")
