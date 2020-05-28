@@ -51,6 +51,7 @@
        javascript
        json
        markdown
+       nix
        ocaml
        org
        sh
