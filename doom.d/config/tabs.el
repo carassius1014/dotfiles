@@ -8,6 +8,8 @@
         (string-prefix-p "*dashboard*" name)
         (string-prefix-p "*direnv*" name)
         (string-prefix-p "*Messages*" name)
+        (string-prefix-p "*scratch" name)
         (string-prefix-p "*Straight" name)
+        (string-prefix-p "*straight" name)
         (and (string-prefix-p "(message "")agit" name)
              (not (file-name-extension name)))))))
