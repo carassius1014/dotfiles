@@ -2,6 +2,7 @@ let
   darwin = import ./channels/darwin.nix;
   nixos = import ./channels/nixos.nix;
   nixpkgs = import ./channels/nixpkgs.nix;
+  python-with-pkgs = import ./packages/python.nix { pkgs = nixpkgs; };
 in {
   allowUnfree = true;
   packageOverrides = pkgs: {
@@ -25,8 +26,8 @@ in {
           ocamlPackages.ocp-indent
           ocamlPackages.utop
           ormolu
-          python38Packages.editorconfig
-          python38Packages.pygments
+          pipenv
+          python-with-pkgs
           ripgrep
           saml2aws
           shadowsocks-libev
