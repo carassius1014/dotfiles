@@ -56,6 +56,7 @@
        nix
        ocaml
        org
+       python
        sh
        yaml
 

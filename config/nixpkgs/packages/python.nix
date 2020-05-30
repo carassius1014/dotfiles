@@ -3,8 +3,8 @@
 with pkgs;
 let
   my-packages = python-pkgs:
-    with python-pkgs;
-    [ editorconfig
+    with python-pkgs; [
+      editorconfig
       isort
       nose
       pygments
