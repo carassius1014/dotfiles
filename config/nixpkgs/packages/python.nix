@@ -1,13 +1,7 @@
 { pkgs, ... }:
 
 with pkgs;
-let
-  my-packages = python-pkgs:
-    with python-pkgs; [
-      editorconfig
-      isort
-      nose
-      pygments
-      pytest
-    ];
-in python3.withPackages my-packages
+buildEnv {
+  name = "python-pkgs";
+  paths = with python38Packages; [ editorconfig isort nose pygments pytest ];
+}
