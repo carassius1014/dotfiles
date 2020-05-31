@@ -3,6 +3,7 @@ let
   nixos = import ./channels/nixos.nix;
   nixpkgs = import ./channels/nixpkgs.nix;
 
+  haskell-pkgs = import ./packages/haskell.nix { pkgs = nixpkgs; };
   ocaml-pkgs = import ./packages/ocaml.nix { pkgs = nixpkgs; };
   python-pkgs = import ./packages/python.nix { pkgs = nixpkgs; };
 in {
@@ -18,13 +19,12 @@ in {
           ghcid
           fd
           fstar
-          haskellPackages.hoogle
+          haskell-pkgs
           hugo
           idris
           multimarkdown
           ocaml
           ocaml-pkgs
-          ormolu
           pipenv
           python38
           python-pkgs
