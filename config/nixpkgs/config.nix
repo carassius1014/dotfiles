@@ -2,6 +2,8 @@ let
   darwin = import ./channels/darwin.nix;
   nixos = import ./channels/nixos.nix;
   nixpkgs = import ./channels/nixpkgs.nix;
+
+  ocaml-pkgs = import ./packages/ocaml.nix { pkgs = nixpkgs; };
   python-pkgs = import ./packages/python.nix { pkgs = nixpkgs; };
 in {
   allowUnfree = true;
@@ -21,10 +23,7 @@ in {
           idris
           multimarkdown
           ocaml
-          ocamlPackages.merlin
-          ocamlPackages.dune
-          ocamlPackages.ocp-indent
-          ocamlPackages.utop
+          ocaml-pkgs
           ormolu
           pipenv
           python38
@@ -41,9 +40,7 @@ in {
     macosPackages = with darwin;
       buildEnv {
         name = "macos-packages";
-        paths = [
-          nixfmt
-        ];
+        paths = [ nixfmt ];
       };
     nixosPackages = with nixos;
       buildEnv {
