@@ -27,12 +27,14 @@ in {
           ocaml
           ocaml-pkgs
           pipenv
+          purescript
           python38
           python-pkgs
           ripgrep
           saml2aws
           shadowsocks-libev
           shellcheck
+          spago
           stack
           tree
           z3

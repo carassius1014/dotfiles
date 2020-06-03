@@ -56,6 +56,7 @@
        nix
        ocaml
        org
+       purescript
        racket
        sh
        yaml
