@@ -57,6 +57,7 @@
        ocaml
        org
        python
+       racket
        sh
        yaml
 
