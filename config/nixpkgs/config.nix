@@ -14,6 +14,7 @@ in {
         name = "common-packages";
         paths = [
           awscli
+          chez
           coq
           direnv
           ghcid
@@ -54,6 +55,7 @@ in {
           musescore
           nodejs
           openjdk
+          racket
           texlive.combined.scheme-full
           unzip
           vscode
