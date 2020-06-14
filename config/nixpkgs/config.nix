@@ -23,9 +23,11 @@ in {
           haskell-pkgs
           hugo
           idris
+          jq
           multimarkdown
           ocaml
           ocaml-pkgs
+          pandoc
           pipenv
           purescript
           python38
