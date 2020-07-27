@@ -58,9 +58,12 @@ in {
           haskellPackages.brittany
           musescore
           nodejs
+          okular
           openjdk
+          pdftk
           racket
           texlive.combined.scheme-full
+          unrar
           unzip
           vscode
           wine
