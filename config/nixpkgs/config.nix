@@ -30,7 +30,6 @@ in {
           pandoc
           pipenv
           purescript
-          python38
           python-pkgs
           ripgrep
           saml2aws
