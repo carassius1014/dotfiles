@@ -61,6 +61,7 @@ in {
           openjdk
           pdftk
           racket
+          rlwrap
           texlive.combined.scheme-full
           unrar
           unzip
