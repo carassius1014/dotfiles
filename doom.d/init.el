@@ -47,6 +47,7 @@
        magit
 
        :lang
+       coq
        emacs-lisp
        haskell
        javascript
