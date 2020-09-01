@@ -62,6 +62,7 @@ in {
           pdftk
           racket
           rlwrap
+          symbola
           texlive.combined.scheme-full
           unrar
           unzip
