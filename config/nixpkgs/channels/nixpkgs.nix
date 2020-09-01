@@ -1,8 +1,8 @@
 let
   nixpkgs = builtins.fetchGit {
-    name = "nixpkgs-unstable-Aug-2020";
+    name = "nixpkgs-unstable-Sep-2020";
     url = "https://github.com/nixos/nixpkgs-channels/";
     ref = "refs/heads/nixpkgs-unstable";
-    rev = "5ad1cdafe15d4ea79ae6abcddc360dd2de35b44e";
+    rev = "f9567594d5af2926a9d5b96ae3bada707280bec6";
   };
 in import nixpkgs { }
