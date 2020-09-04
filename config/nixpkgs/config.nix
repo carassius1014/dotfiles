@@ -32,6 +32,7 @@ in {
           purescript
           python-pkgs
           ripgrep
+          rustup
           saml2aws
           shadowsocks-libev
           shellcheck
