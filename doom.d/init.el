@@ -59,6 +59,7 @@
        org
        purescript
        racket
+       rust
        sh
        yaml
 
