@@ -1,6 +1,8 @@
 { pkgs, ... }: {
   environment.systemPackages = with pkgs; [
+    binutils
     emacs
+    gcc
     git
     gnumake
     lsof
@@ -9,5 +11,6 @@
     nixfmt
     ruby
     rxvt_unicode
+    zlib
   ];
 }
