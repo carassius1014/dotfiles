@@ -1,8 +1,8 @@
 let
   nixpkgs = builtins.fetchGit {
-    name = "nixos-20.03";
+    name = "nixos-unstable";
     url = "https://github.com/nixos/nixpkgs-channels/";
-    ref = "refs/heads/nixos-20.03";
-    rev = "95b9c99f6d091273572ff1ec62b97b6ad3f68bdf";
+    ref = "refs/heads/nixos-unstable";
+    rev = "61525137fd1002f6f2a5eb0ea27d480713362cd5";
   };
 in import nixpkgs { }
