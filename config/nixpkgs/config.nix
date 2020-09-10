@@ -1,14 +1,16 @@
 let
+
+  nixpkgs = import ./channels/nixpkgs.nix;
   darwin = import ./channels/darwin.nix;
   nixos = import ./channels/nixos.nix;
 
-  haskell-pkgs = import ./packages/haskell.nix { pkgs = nixos; };
-  ocaml-pkgs = import ./packages/ocaml.nix { pkgs = nixos; };
-  python-pkgs = import ./packages/python.nix { pkgs = nixos; };
+  haskell-pkgs = import ./packages/haskell.nix { pkgs = nixpkgs; };
+  ocaml-pkgs = import ./packages/ocaml.nix { pkgs = nixpkgs; };
+  python-pkgs = import ./packages/python.nix { pkgs = nixpkgs; };
 in {
   allowUnfree = true;
   packageOverrides = pkgs: {
-    commonPackages = with nixos;
+    commonPackages = with nixpkgs;
       buildEnv {
         name = "common-packages";
         paths = [
