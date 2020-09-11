@@ -62,6 +62,7 @@ in {
           okular
           openjdk
           pdftk
+          quartus-prime-lite
           racket
           rlwrap
           symbola
