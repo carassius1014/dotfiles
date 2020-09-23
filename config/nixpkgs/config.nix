@@ -65,6 +65,7 @@ in {
           quartus-prime-lite
           racket
           rlwrap
+          steam
           symbola
           texlive.combined.scheme-full
           unrar
