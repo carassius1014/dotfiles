@@ -18,6 +18,7 @@
     ./modules/system.nix
     ./modules/terminal.nix
     ./modules/users.nix
+    ./modules/video.nix
     ./modules/xserver.nix
   ];
 }
