@@ -62,6 +62,7 @@ in {
           okular
           openjdk
           pdftk
+          postgresql
           quartus-prime-lite
           racket
           rlwrap
