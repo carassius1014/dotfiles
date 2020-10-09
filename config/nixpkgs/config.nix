@@ -63,7 +63,6 @@ in {
           openjdk
           pdftk
           postgresql
-          quartus-prime-lite
           racket
           rlwrap
           steam
