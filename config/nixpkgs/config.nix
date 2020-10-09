@@ -22,6 +22,7 @@ in {
           fd
           fstar
           haskell-pkgs
+          httpie
           hugo
           idris
           jq
