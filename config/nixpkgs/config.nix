@@ -1,7 +1,6 @@
 let
 
   nixpkgs = import ./channels/nixpkgs.nix;
-  darwin = import ./channels/darwin.nix;
   nixos = import ./channels/nixos.nix;
 
   haskell-pkgs = import ./packages/haskell.nix { pkgs = nixpkgs; };
@@ -44,7 +43,7 @@ in {
           z3
         ];
       };
-    macosPackages = with darwin;
+    macosPackages = with nixpkgs;
       buildEnv {
         name = "macos-packages";
         paths = [ nixfmt fish ];
