@@ -3,5 +3,9 @@
 with pkgs;
 buildEnv {
   name = "haskell-pkgs";
-  paths = with haskellPackages; [ hoogle ormolu threadscope ];
+  paths = with haskellPackages; [
+    hoogle
+    ormolu
+    # threadscope
+  ];
 }

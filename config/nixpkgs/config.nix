@@ -23,7 +23,6 @@ in {
           haskell-pkgs
           httpie
           hugo
-          idris
           jq
           multimarkdown
           ocaml
