@@ -60,6 +60,7 @@ in {
           nodejs
           okular
           openjdk
+          p7zip
           pdftk
           postgresql
           racket
