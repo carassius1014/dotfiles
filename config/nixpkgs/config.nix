@@ -38,7 +38,6 @@ in {
           saml2aws
           shadowsocks-libev
           shellcheck
-          spago
           stack
           tree
           z3
