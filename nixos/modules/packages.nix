@@ -12,6 +12,7 @@
     nixfmt
     ruby
     rxvt_unicode
+    vim
     zlib
   ];
 }
