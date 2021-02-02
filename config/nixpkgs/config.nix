@@ -14,8 +14,10 @@ in {
         name = "common-packages";
         paths = [
           awscli
+          cargo-generate
           chez
           coq
+          deno
           direnv
           ghcid
           fd
