@@ -71,7 +71,6 @@ in {
           texlive.combined.scheme-full
           unrar
           unzip
-          vscode
           wine
           winetricks
           yarn
