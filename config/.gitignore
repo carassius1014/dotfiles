@@ -2,6 +2,7 @@
 !.gitignore
 
 !*/
+!alacritty/**
 !brittany/**
 !fish/**
 !i3/**
