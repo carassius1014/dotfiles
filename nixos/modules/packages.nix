@@ -1,6 +1,7 @@
 { pkgs, ... }: {
   nixpkgs.config.allowUnfree = true;
   environment.systemPackages = with pkgs; [
+    alacritty
     binutils
     emacs
     gcc
@@ -11,7 +12,6 @@
     nitrogen
     nixfmt
     ruby
-    rxvt_unicode
     vim
     zlib
   ];
