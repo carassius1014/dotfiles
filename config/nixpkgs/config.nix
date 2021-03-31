@@ -57,6 +57,7 @@ in {
           google-chrome
           graphviz
           haskellPackages.brittany
+          heroku
           musescore
           nodejs
           okular
