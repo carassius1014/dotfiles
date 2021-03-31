@@ -41,6 +41,7 @@
 
        :tools
        direnv
+       docker
        editorconfig
        (eval +overlay)
        lookup
