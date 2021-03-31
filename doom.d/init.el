@@ -45,12 +45,13 @@
        editorconfig
        (eval +overlay)
        lookup
+       lsp
        magit
 
        :lang
        coq
        emacs-lisp
-       haskell
+       (haskell +lsp)
        javascript
        json
        latex
