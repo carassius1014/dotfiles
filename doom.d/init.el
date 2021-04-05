@@ -59,6 +59,7 @@
        nix
        ocaml
        org
+       protobuf
        purescript
        racket
        rust
