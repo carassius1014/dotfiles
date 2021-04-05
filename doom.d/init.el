@@ -51,7 +51,7 @@
        :lang
        coq
        emacs-lisp
-       (haskell +lsp)
+       haskell
        javascript
        json
        latex
