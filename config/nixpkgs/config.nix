@@ -56,7 +56,6 @@ in {
           evince
           google-chrome
           graphviz
-          haskellPackages.brittany
           heroku
           musescore
           nodejs
