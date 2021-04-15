@@ -1,8 +1,8 @@
 let
   nixpkgs = builtins.fetchGit {
-    name = "nixpkgs-unstable-Mar-2021";
+    name = "nixpkgs-unstable-Apr-2021";
     url = "https://github.com/NixOS/nixpkgs/";
     ref = "refs/heads/nixpkgs-unstable";
-    rev = "f5f6dc053b1a0eca03c853dad710f3de070df24e";
+    rev = "54c1e44240d8a527a8f4892608c4bce5440c3ecb";
   };
 in import nixpkgs { }
