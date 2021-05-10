@@ -57,11 +57,9 @@
        latex
        markdown
        nix
-       ocaml
        org
        protobuf
        purescript
-       racket
        rust
        sh
        yaml
