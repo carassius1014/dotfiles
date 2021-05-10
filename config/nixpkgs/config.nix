@@ -1,9 +1,8 @@
 let
-
-  pkgs = import ./channels/nixpkgs.nix;
+  pkgs = import ../../.dotfiles/nix/pkgs.nix;
 in {
   allowUnfree = true;
-  packageOverrides = pkgs: {
+  packageOverrides = _: {
     homePackages = with pkgs;
       buildEnv {
         name = "home-packages";
