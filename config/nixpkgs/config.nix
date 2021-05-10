@@ -58,6 +58,7 @@ in {
           graphviz
           heroku
           musescore
+          nixfmt
           nodejs
           okular
           openjdk

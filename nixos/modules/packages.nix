@@ -10,7 +10,6 @@
     lsof
     lxqt.pavucontrol-qt
     nitrogen
-    nixfmt
     ruby
     vim
     zlib
