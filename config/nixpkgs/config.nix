@@ -23,6 +23,7 @@ in {
           okular
           p7zip
           pdftk
+          python38Packages.editorconfig
           ripgrep
           rlwrap
           saml2aws
