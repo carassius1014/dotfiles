@@ -20,6 +20,7 @@ in {
           musescore
           niv
           nixfmt
+          nodejs
           okular
           p7zip
           pdftk
