@@ -7,10 +7,11 @@
    ("\\.y\\'" . fundamental-mode))
   :config
   (add-hook 'haskell-mode-hook 'haskell-auto-insert-module-template)
-  (add-hook 'buffer-list-update-hook 'setup-haskell-stylish-on-save)
-  (setq haskell-mode-stylish-haskell-path "ormolu"))
+  (add-hook 'buffer-list-update-hook 'setup-haskell-stylish-on-save))
 
 (defun setup-haskell-stylish-on-save ()
-  (if (getenv "NO_HASKELL_STYLISH_ON_SAVE")
-      (setq haskell-stylish-on-save nil)
-    (setq haskell-stylish-on-save t)))
+  (let ((formatter (getenv "HASKELL_FORMATTER")))
+    (if formatter
+        (progn (setq haskell-mode-stylish-haskell-path formatter)
+               (setq haskell-stylish-on-save t))
+      (setq haskell-stylish-on-save nil))))
