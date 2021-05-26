@@ -60,7 +60,7 @@
        org
        protobuf
        purescript
-       rust
+       (rust +lsp)
        sh
        yaml
 
