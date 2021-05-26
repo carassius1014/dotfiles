@@ -1,5 +1,4 @@
-let
-  pkgs = import ../../.dotfiles/nix/pkgs.nix;
+let pkgs = import ../../.dotfiles/nix/pkgs.nix;
 in {
   allowUnfree = true;
   packageOverrides = _: {
