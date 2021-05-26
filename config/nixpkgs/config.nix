@@ -14,6 +14,7 @@ in {
           google-chrome
           graphviz
           fd
+          haskellPackages.hoogle
           httpie
           jq
           multimarkdown
