@@ -8,6 +8,7 @@
     ./modules/boot.nix
     ./modules/console.nix
     ./modules/docker.nix
+    ./modules/editor.nix
     ./modules/firewall.nix
     ./modules/fonts.nix
     ./modules/i18n.nix

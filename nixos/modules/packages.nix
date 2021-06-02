@@ -3,10 +3,10 @@
   environment.systemPackages = with pkgs; [
     alacritty
     binutils
-    emacs
     gcc
     git
     gnumake
+    libgccjit
     lsof
     lxqt.pavucontrol-qt
     nitrogen
