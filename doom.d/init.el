@@ -27,7 +27,7 @@
        snippets
 
        :emacs
-       dired+
+       (dired +icons)
        electric
        ibuffer
        undo
