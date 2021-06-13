@@ -34,7 +34,7 @@
        vc
 
        :term
-       eshell
+       vterm
 
        :checkers
        syntax
