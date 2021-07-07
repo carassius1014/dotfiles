@@ -8,6 +8,7 @@ in {
         paths = [
           awscli
           direnv
+          dhall
           docker-compose
           evince
           google-chrome
