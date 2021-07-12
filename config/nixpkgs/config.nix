@@ -7,6 +7,7 @@ in {
         name = "home-packages";
         paths = [
           awscli
+          coq
           direnv
           dhall
           docker-compose
