@@ -49,6 +49,7 @@
        magit
 
        :lang
+       (agda +local)
        coq
        emacs-lisp
        haskell
