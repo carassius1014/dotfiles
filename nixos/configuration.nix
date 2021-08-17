@@ -6,12 +6,12 @@
 
     ./modules/audio.nix
     ./modules/boot.nix
+    ./modules/cachix.nix
     ./modules/console.nix
     ./modules/docker.nix
     ./modules/editor.nix
     ./modules/firewall.nix
     ./modules/fonts.nix
-    ./modules/haskell.nix
     ./modules/i18n.nix
     ./modules/network.nix
     ./modules/packages.nix
