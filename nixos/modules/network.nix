@@ -11,4 +11,17 @@
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
+
+  # Setup TCP/UDP for LAN hlds server
+  networking.firewall = {
+    allowedTCPPortRanges = [{
+      from = 27005;
+      to = 27030;
+    }];
+
+    allowedUDPPortRanges = [{
+      from = 27005;
+      to = 27030;
+    }];
+  };
 }
