@@ -1,3 +1,4 @@
+recommend-stack-upgrade: false
 templates:
   params:
     author-name: Jiyu Zhou
