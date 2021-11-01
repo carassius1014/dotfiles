@@ -15,6 +15,7 @@ in {
           google-chrome
           graphviz
           fd
+          fzf
           haskellPackages.hoogle
           httpie
           jq
