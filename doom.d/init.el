@@ -51,6 +51,7 @@
        :lang
        (agda +local)
        coq
+       dhall
        emacs-lisp
        haskell
        javascript
