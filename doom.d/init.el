@@ -47,6 +47,7 @@
        lookup
        lsp
        magit
+       terraform
 
        :lang
        (agda +local)
