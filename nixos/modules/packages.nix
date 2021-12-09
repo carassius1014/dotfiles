@@ -9,6 +9,7 @@
     libgccjit
     lsof
     lxqt.pavucontrol-qt
+    neofetch
     nitrogen
     ruby
     vim
