@@ -12,6 +12,7 @@ in {
           dhall
           docker-compose
           evince
+          gh
           google-chrome
           graphviz
           fd
