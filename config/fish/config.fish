@@ -31,3 +31,6 @@ set PATH $HOME/.emacs.d/bin $PATH
 set PATH $HOME/.local/bin $PATH
 
 set -x SHISHO_DIR $HOME/.shisho
+
+# haskell
+set -x HASKELL_FORMATTER brittany
