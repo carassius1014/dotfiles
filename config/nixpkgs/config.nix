@@ -13,6 +13,7 @@ in {
           docker-compose
           evince
           gh
+          ghcid
           google-chrome
           graphviz
           fd
