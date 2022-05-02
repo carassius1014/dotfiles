@@ -4,6 +4,3 @@
 [user]
   name = carassius1014
   email = carassius1014@gmail.com
-
-[core]
-  excludesfile = ~/.gitignore_global
