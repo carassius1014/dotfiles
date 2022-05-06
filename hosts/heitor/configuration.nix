@@ -13,7 +13,7 @@
     ./modules/fonts.nix
     ./modules/i18n.nix
     ./modules/network.nix
-    ./modules/nixpkgs.nix
+    ./modules/nix.nix
     ./modules/packages.nix
     ./modules/ssh.nix
     ./modules/system.nix

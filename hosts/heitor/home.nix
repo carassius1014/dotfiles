@@ -46,5 +46,19 @@
     stateVersion = "22.05";
   };
 
-  programs.home-manager.enable = true;
+  programs = {
+    git = {
+      enable = true;
+      userName = "Jiyu Zhou";
+      userEmail = "carassius1014@gmail.com";
+      ignores = [ ".direnv" ];
+      extraConfig = {
+        init = {
+          defaultBranch = "master";
+        };
+      };
+    };
+
+    home-manager.enable = true;
+  };
 }
