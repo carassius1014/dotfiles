@@ -3,11 +3,7 @@
 
 !*/
 !alacritty/**
-!direnv/**
 !fish/**
-!git/**
 !i3/**
 !nitrogen/**
-!nix/**
-!nixpkgs/**
 !polybar/**
