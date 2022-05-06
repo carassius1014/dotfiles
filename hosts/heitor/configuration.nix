@@ -1,9 +1,8 @@
 { config, pkgs, ... }:
 
 {
-  imports = [ # Include the results of the hardware scan.
-    /etc/nixos/hardware-configuration.nix
-
+  imports = [
+    ./hardware-configuration.nix
     ./modules/audio.nix
     ./modules/boot.nix
     ./modules/cachix.nix
@@ -14,6 +13,7 @@
     ./modules/fonts.nix
     ./modules/i18n.nix
     ./modules/network.nix
+    ./modules/nixpkgs.nix
     ./modules/packages.nix
     ./modules/ssh.nix
     ./modules/system.nix
