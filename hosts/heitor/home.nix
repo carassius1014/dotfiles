@@ -1,6 +1,8 @@
 { pkgs }:
 
 {
+  imports = [ ../common/home/programs ../common/home/programs/git.nix ];
+
   home = {
     username = "carassius1014";
     homeDirectory = "/home/carassius1014";
@@ -44,17 +46,5 @@
     ];
 
     stateVersion = "22.05";
-  };
-
-  programs = {
-    git = {
-      enable = true;
-      userName = "Jiyu Zhou";
-      userEmail = "carassius1014@gmail.com";
-      ignores = [ ".direnv" ];
-      extraConfig = { init = { defaultBranch = "master"; }; };
-    };
-
-    home-manager.enable = true;
   };
 }
