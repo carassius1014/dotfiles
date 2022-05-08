@@ -9,9 +9,12 @@
 
     darwin.url = "github:lnl7/nix-darwin/master";
     darwin.inputs.nixpkgs.follows = "nixpkgs";
+
+    flake-utils.url = "github:numtide/flake-utils";
+    flake-utils.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = inputs@{ nixpkgs, home-manager, darwin, ... }: {
+  outputs = inputs@{ nixpkgs, home-manager, darwin, flake-utils, ... }: {
     nixosConfigurations = {
       heitor = import ./hosts/heitor { inherit nixpkgs home-manager; };
     };
@@ -20,12 +23,10 @@
       miguel = import ./hosts/miguel { inherit nixpkgs darwin home-manager; };
     };
 
-    devShell = {
-      x86_64-linux = let pkgs = nixpkgs.legacyPackages.x86_64-linux;
-      in pkgs.mkShell { buildInputs = with pkgs; [ nixfmt ]; };
-
-      aarch64-darwin = let pkgs = nixpkgs.legacyPackages.aarch64-darwin;
-      in pkgs.mkShell { buildInputs = with pkgs; [ nixfmt ]; };
-    };
+    devShell = (flake-utils.lib.eachDefaultSystem (system:
+      let pkgs = nixpkgs.legacyPackages.${system};
+      in {
+        shell = pkgs.mkShell { buildInputs = with pkgs; [ nixfmt ]; };
+      })).shell;
   };
 }
