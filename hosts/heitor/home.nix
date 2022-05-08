@@ -1,7 +1,11 @@
 { pkgs }:
 
 {
-  imports = [ ../common/home/programs ../common/home/programs/git.nix ];
+  imports = [
+    ../common/home/programs
+    ../common/home/programs/fish.nix
+    ../common/home/programs/git.nix
+  ];
 
   home = {
     username = "carassius1014";
