@@ -1,6 +1,8 @@
 { config, pkgs, lib, ... }:
 
 {
+  imports = [ ../common/configuration/nix.nix ];
+
   # List packages installed in system profile. To search by name, run:
   # $ nix-env -qaP | grep wget
   environment.systemPackages = [ pkgs.vim ];
@@ -11,25 +13,7 @@
 
   # Auto upgrade nix package and the daemon service.
   services.nix-daemon.enable = true;
-
-  nix.binaryCaches = [ "https://cache.nixos.org/" ];
-
-  nix.binaryCachePublicKeys =
-    [ "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY=" ];
-
-  nix.trustedUsers = [ "@admin" ];
-
   users.nix.configureBuildUsers = true;
-
-  nix = {
-    package = pkgs.nix;
-    extraOptions = ''
-      auto-optimise-store = true
-      experimental-features = nix-command flakes
-    '' + lib.optionalString (pkgs.system == "aarch64-darwin") ''
-      extra-platforms = aarch64-darwin
-    '';
-  };
 
   programs.fish.enable = true;
 
