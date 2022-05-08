@@ -3,9 +3,11 @@
 {
   imports = [
     ./hardware-configuration.nix
+
+    ../common/configuration/nix.nix
+
     ./configuration/audio.nix
     ./configuration/boot.nix
-    ./configuration/cachix.nix
     ./configuration/console.nix
     ./configuration/docker.nix
     ./configuration/editor.nix
@@ -13,7 +15,6 @@
     ./configuration/fonts.nix
     ./configuration/i18n.nix
     ./configuration/network.nix
-    ./configuration/nix.nix
     ./configuration/packages.nix
     ./configuration/ssh.nix
     ./configuration/system.nix
