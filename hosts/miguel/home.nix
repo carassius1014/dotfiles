@@ -15,6 +15,4 @@
     python310Packages.editorconfig
     ripgrep
   ];
-
-  programs.emacs.enable = true;
 }
