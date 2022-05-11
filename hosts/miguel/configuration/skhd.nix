@@ -6,7 +6,7 @@
     package = pkgs.skhd;
     skhdConfig = ''
       # open terminal
-      lalt - return : kitty
+      # lalt - return : kitty
 
       # open emacs
       lalt - e : emacs
