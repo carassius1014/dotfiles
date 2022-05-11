@@ -35,7 +35,7 @@
   '';
 
   fonts.fontDir.enable = true;
-  fonts.fonts = with pkgs; [ sarasa-gothic ];
+  fonts.fonts = with pkgs; [ nerdfonts sarasa-gothic ];
 
   # Keyboard
   system.keyboard.enableKeyMapping = true;
