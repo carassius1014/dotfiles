@@ -10,7 +10,7 @@ in {
   inherit imports;
 
   nix = {
-    package = pkgs.nixFlakes;
+    package = pkgs.nix_2_7;
     extraOptions = ''
       auto-optimise-store = true
       experimental-features = nix-command flakes
