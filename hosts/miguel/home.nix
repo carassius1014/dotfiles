@@ -10,7 +10,6 @@
   ];
 
   home.packages = with pkgs; [
-    coreutils
     gh
     jq
     python310Packages.editorconfig
