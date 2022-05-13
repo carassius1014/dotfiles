@@ -8,10 +8,5 @@
     ../common/home/programs/git.nix
   ];
 
-  home.packages = with pkgs; [
-    gh
-    jq
-    python310Packages.editorconfig
-    ripgrep
-  ];
+  home.packages = with pkgs; [ gh jq python310Packages.editorconfig ripgrep ];
 }
