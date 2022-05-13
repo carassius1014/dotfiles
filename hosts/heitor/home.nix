@@ -36,6 +36,7 @@
       okular
       p7zip
       pdftk
+      python310
       python38Packages.editorconfig
       ripgrep
       rlwrap
