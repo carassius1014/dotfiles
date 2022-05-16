@@ -3,7 +3,7 @@
 {
   imports = [
     ../common/home/programs
-    ../common/home/programs/direnv.nix
+  # ../common/home/programs/direnv.nix
     ../common/home/programs/fish.nix
     ../common/home/programs/git.nix
   ];
@@ -32,6 +32,7 @@
       musescore
       niv
       nixfmt
+      nix-direnv-flakes
       nodejs
       okular
       p7zip
