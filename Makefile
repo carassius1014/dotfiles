@@ -1,10 +1,10 @@
 all:
 
 heitor.rebuild:
-	sudo NIXPKGS_ALLOW_UNFREE=1 nixos-rebuild switch --impure --flake .
+	NIXPKGS_ALLOW_UNFREE=1 nixos-rebuild switch --use-remote-sudo --impure --flake .
 
 heitor.rebuild.force:
-	sudo NIXPKGS_ALLOW_UNFREE=1 nixos-rebuild switch --install-bootloader --impure --flake .
+	NIXPKGS_ALLOW_UNFREE=1 nixos-rebuild switch --use-remote-sudo --install-bootloader --impure --flake .
 
 miguel.rebuild:
 	sudo darwin-rebuild switch --flake .
