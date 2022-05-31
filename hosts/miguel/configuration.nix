@@ -2,7 +2,9 @@
 
 {
   imports = [
+    ../common/configuration/emacs.nix
     ../common/configuration/nix.nix
+
     ./configuration/skhd.nix
     ./configuration/yabai.nix
   ];
@@ -20,8 +22,6 @@
   # Auto upgrade nix package and the daemon service.
   services.nix-daemon.enable = true;
   users.nix.configureBuildUsers = true;
-
-  services.emacs.enable = true;
 
   programs.fish.enable = true;
   environment.shells = [ pkgs.fish ];
