@@ -4,13 +4,13 @@
   imports = [
     /etc/nixos/hardware-configuration.nix
 
+    ../common/configuration/emacs.nix
     ../common/configuration/nix.nix
 
     ./configuration/audio.nix
     ./configuration/boot.nix
     ./configuration/console.nix
     ./configuration/docker.nix
-    ./configuration/editor.nix
     ./configuration/firewall.nix
     ./configuration/fonts.nix
     ./configuration/i18n.nix
