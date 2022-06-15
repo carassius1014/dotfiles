@@ -13,14 +13,8 @@
     homeDirectory = "/home/carassius1014";
 
     packages = with pkgs; [
-      awscli
-      coq
       direnv
-      dhall
-      docker-compose
-      evince
       gh
-      ghcid
       google-chrome
       graphviz
       fd
@@ -28,21 +22,16 @@
       haskellPackages.hoogle
       httpie
       jq
-      multimarkdown
-      musescore
-      niv
-      nixfmt
       nodejs
       okular
       p7zip
       pdftk
       python310
-      python38Packages.editorconfig
+      python310Packages.editorconfig
       ripgrep
       rlwrap
       saml2aws
       shellcheck
-      stack
       steam
       symbola
       texlive.combined.scheme-full
