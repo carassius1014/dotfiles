@@ -3,7 +3,6 @@
   environment.systemPackages = with pkgs; [
     alacritty
     binutils
-    gcc
     git
     gnumake
     libgccjit
@@ -11,8 +10,6 @@
     lxqt.pavucontrol-qt
     neofetch
     nitrogen
-    ruby
     vim
-    zlib
   ];
 }
