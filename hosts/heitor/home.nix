@@ -13,6 +13,7 @@
     homeDirectory = "/home/carassius1014";
 
     packages = with pkgs; [
+      black
       direnv
       gh
       google-chrome
