@@ -62,6 +62,7 @@
        org
        protobuf
        purescript
+       python
        (rust +lsp)
        sh
        yaml
