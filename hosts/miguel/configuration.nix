@@ -4,12 +4,7 @@
   imports = [
     ../common/configuration/emacs.nix
     ../common/configuration/nix.nix
-
-    ./configuration/skhd.nix
-    ./configuration/yabai.nix
   ];
-
-  nixpkgs.overlays = [ (import ./overlays/yabai.nix) ];
 
   # List packages installed in system profile. To search by name, run:
   # $ nix-env -qaP | grep wget
