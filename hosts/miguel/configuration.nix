@@ -1,10 +1,8 @@
 { config, pkgs, lib, ... }:
 
 {
-  imports = [
-    ../common/configuration/emacs.nix
-    ../common/configuration/nix.nix
-  ];
+  imports =
+    [ ../common/configuration/emacs.nix ../common/configuration/nix.nix ];
 
   # List packages installed in system profile. To search by name, run:
   # $ nix-env -qaP | grep wget
