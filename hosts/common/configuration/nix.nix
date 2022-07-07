@@ -1,21 +1,28 @@
 { pkgs, lib, ... }:
 
-let
-  folder = ./cachix;
-  toImport = name: value: folder + ("/" + name);
-  filterCaches = key: value: value == "regular" && lib.hasSuffix ".nix" key;
-  imports = lib.mapAttrsToList toImport
-    (lib.filterAttrs filterCaches (builtins.readDir folder));
-in {
-  inherit imports;
-
+{
   nix = {
+    binaryCaches = [
+      "https://cache.nixos.org"
+      "https://herp-slum.cachix.org"
+      "https://hydra.iohk.io"
+      "https://nix-community.cachix.org"
+    ];
+
+    binaryCachePublicKeys = [
+      "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY="
+      "herp-slum.cachix.org-1:6SC4HZSxqnmi6Jyxg+Omz+8o2uz8r4sgrz+cB1hn42I="
+      "hydra.iohk.io:f/Ea+s+dFdN+3Y/G+FDgSq+a5NEWhJGzdjvKNGv0/EQ="
+      "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
+    ];
+
     extraOptions = ''
       auto-optimise-store = true
       experimental-features = nix-command flakes
     '' + lib.optionalString (pkgs.system == "aarch64-darwin") ''
       extra-platforms = aarch64-darwin
     '';
+
     trustedUsers = [ "@admin" ];
   };
 
