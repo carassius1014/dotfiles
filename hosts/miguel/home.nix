@@ -9,10 +9,9 @@
     ../common/home/programs/git.nix
   ];
 
-  home.packages = with pkgs; [
-    jq
-    nixfmt
-    python310Packages.editorconfig
-    ripgrep
-  ];
+  home = {
+    packages = with pkgs; [ jq nixfmt python310Packages.editorconfig ripgrep ];
+
+    stateVersion = "22.05";
+  };
 }
