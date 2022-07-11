@@ -9,6 +9,7 @@
     ./configuration/boot.nix
     ./configuration/console.nix
     ./configuration/docker.nix
+    ./configuration/ec2.nix
     ./configuration/firewall.nix
     ./configuration/i18n.nix
     ./configuration/network.nix
