@@ -17,6 +17,7 @@
   outputs = inputs@{ nixpkgs, home-manager, darwin, flake-utils, ... }: {
     nixosConfigurations = {
       heitor = import ./hosts/heitor { inherit nixpkgs home-manager; };
+      roland = import ./hosts/roland { inherit nixpkgs home-manager; };
     };
 
     darwinConfigurations = {
