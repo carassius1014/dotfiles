@@ -21,6 +21,9 @@
       experimental-features = nix-command flakes
     '' + lib.optionalString (pkgs.system == "aarch64-darwin") ''
       extra-platforms = aarch64-darwin
+      netrc-file = /Users/carassius1014/.netrc
+    '' + lib.optionalString (pkgs.system == "x86-linux") ''
+      netrc-file = /home/carassius1014/.netrc
     '';
 
     trustedUsers = [ "@admin" ];
