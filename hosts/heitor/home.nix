@@ -5,6 +5,7 @@
     ../common/home/programs
     ../common/home/programs/direnv.nix
     ../common/home/programs/fish.nix
+    ../common/home/programs/gh.nix
     ../common/home/programs/git.nix
   ];
 
@@ -15,7 +16,6 @@
     packages = with pkgs; [
       black
       direnv
-      gh
       google-chrome
       graphviz
       fd
