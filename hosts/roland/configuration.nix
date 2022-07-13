@@ -8,7 +8,6 @@
     ./configuration/console.nix
     ./configuration/docker.nix
     ./configuration/ec2.nix
-    ./configuration/firewall.nix
     ./configuration/i18n.nix
     ./configuration/network.nix
     ./configuration/packages.nix
