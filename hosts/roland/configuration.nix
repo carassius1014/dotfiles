@@ -2,8 +2,6 @@
 
 {
   imports = [
-    /etc/nixos/hardware-configuration.nix
-
     ../common/configuration/nix.nix
 
     ./configuration/boot.nix
