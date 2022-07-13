@@ -4,7 +4,6 @@
   imports = [
     ../common/configuration/nix.nix
 
-    ./configuration/boot.nix
     ./configuration/console.nix
     ./configuration/docker.nix
     ./configuration/ec2.nix
