@@ -10,7 +10,13 @@
   ];
 
   home = {
-    packages = with pkgs; [ jq nixfmt python310Packages.editorconfig ripgrep ];
+    packages = with pkgs; [
+      jq
+      nixfmt
+      python310Packages.editorconfig
+      ripgrep
+      zstd
+    ];
 
     stateVersion = "22.05";
   };
