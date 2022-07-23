@@ -23,6 +23,7 @@
       haskellPackages.hoogle
       httpie
       jq
+      nix-prefetch-git
       nodejs
       okular
       p7zip
