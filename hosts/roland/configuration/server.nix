@@ -1,9 +1,17 @@
 {
-  services.nginx.enable = true;
-  security.acme.acceptTerms = true;
-  services.nginx.virtualHosts."carassius1014.io" = {
-    addSSL = true;
-    enableACME = true;
-    root = "/home/carassius1014/www";
+  security.acme = {
+    acceptTerms = true;
+    defaults.email = "carassius1014@gmail.com";
+  };
+
+  services.nginx = {
+    enable = true;
+    virtualHosts = {
+      "carassius1014.io" = {
+        addSSL = true;
+        enableACME = true;
+        root = "/home/carassius1014/www";
+      };
+    };
   };
 }
