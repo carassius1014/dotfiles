@@ -10,6 +10,7 @@
     ./configuration/i18n.nix
     ./configuration/network.nix
     ./configuration/packages.nix
+    ./configuration/server.nix
     ./configuration/ssh.nix
     ./configuration/system.nix
     ./configuration/terminal.nix
