@@ -15,6 +15,7 @@
 
     packages = with pkgs; [
       black
+      dig
       direnv
       google-chrome
       graphviz
