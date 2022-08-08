@@ -41,6 +41,7 @@
       tree
       unrar
       unzip
+      whois
     ];
 
     stateVersion = "22.05";
