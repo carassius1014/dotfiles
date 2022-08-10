@@ -11,7 +11,6 @@
     ./configuration/boot.nix
     ./configuration/console.nix
     ./configuration/docker.nix
-    ./configuration/firewall.nix
     ./configuration/fonts.nix
     ./configuration/i18n.nix
     ./configuration/network.nix
