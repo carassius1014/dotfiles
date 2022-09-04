@@ -21,7 +21,7 @@
     };
 
     darwinConfigurations = {
-      miguel = import ./hosts/miguel { inherit nixpkgs darwin home-manager; };
+      GTPC22013 = import ./hosts/miguel { inherit nixpkgs darwin home-manager; };
     };
 
     devShell = (flake-utils.lib.eachDefaultSystem (system:
