@@ -1,7 +1,9 @@
-{ pkgs, ... }:
+{ pkgs, codexHmModule, ... }:
 
 {
   imports = [
+    codexHmModule
+    ./home/codex.nix
     ../common/home/programs
     ../common/home/programs/direnv.nix
     ../common/home/programs/fish.nix
