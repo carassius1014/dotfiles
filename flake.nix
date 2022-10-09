@@ -15,7 +15,7 @@
 
   outputs = inputs@{ nixpkgs, home-manager, darwin, codex, ... }: {
     nixosConfigurations = {
-      heitor = import ./hosts/heitor { inherit nixpkgs home-manager; };
+      heitor = import ./hosts/heitor { inherit nixpkgs home-manager codex; };
       roland = import ./hosts/roland { inherit nixpkgs home-manager; };
     };
 

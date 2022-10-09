@@ -1,4 +1,4 @@
-{ nixpkgs, home-manager }:
+{ nixpkgs, home-manager, codex }:
 
 nixpkgs.lib.nixosSystem {
   system = "x86_64-linux";
@@ -8,9 +8,10 @@ nixpkgs.lib.nixosSystem {
     {
       home-manager.useGlobalPkgs = true;
       home-manager.useUserPackages = true;
-      home-manager.users.carassius1014 =
-        let pkgs = nixpkgs.legacyPackages.x86_64-linux;
-        in import ./home.nix { inherit pkgs; };
+      home-manager.users.carassius1014 = let
+        pkgs = nixpkgs.legacyPackages.x86_64-linux;
+        codexHmModule = codex.hmModule.x86_64-linux;
+      in import ./home.nix { inherit pkgs codexHmModule; };
     }
   ];
 }
