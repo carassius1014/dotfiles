@@ -3,6 +3,7 @@
   environment.systemPackages = with pkgs; [
     alacritty
     binutils
+    dmidecode
     git
     gnumake
     libgccjit
