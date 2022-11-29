@@ -1,7 +1,0 @@
-recommend-stack-upgrade: false
-templates:
-  params:
-    author-name: Jiyu Zhou
-    author-email: carassius1014@gmail.com
-    copyright: (c) 2021 Jiyu Zhou
-    github-username: carassius1014
