@@ -165,7 +165,7 @@
     "darwin": {
       "inputs": {
         "nixpkgs": [
-          "nixpkgs"
+          "nixpkgs-darwin"
         ]
       },
       "locked": {
@@ -504,6 +504,22 @@
         "type": "github"
       }
     },
+    "nixpkgs-darwin": {
+      "locked": {
+        "lastModified": 1669866757,
+        "narHash": "sha256-nXdmJptk5+4VxqG1+WXhpKcTfO7pZv3Z5GkInmI8Ucg=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "3a94155bda4041e7f24e79510dae7b6e10947894",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "ref": "nixpkgs-22.11-darwin",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
     "nixpkgs-regression": {
       "locked": {
         "lastModified": 1643052045,
@@ -588,7 +604,8 @@
         "codex": "codex",
         "darwin": "darwin",
         "home-manager": "home-manager",
-        "nixpkgs": "nixpkgs_3"
+        "nixpkgs": "nixpkgs_3",
+        "nixpkgs-darwin": "nixpkgs-darwin"
       }
     },
     "rust-overlay": {
