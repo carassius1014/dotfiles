@@ -12,6 +12,7 @@
     ../common/home/programs/git.nix
 
     ./home/alacritty.nix
+    ./home/fcitx5.nix
   ];
 
   home = {
