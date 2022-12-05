@@ -145,9 +145,3 @@ bindsym Ctrl+space exec rofi -show run -lines 3 -eh 2 -font "Sarasa Gothic CL 12
 ##################
 
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-
-#################
-# - WALLPAPER - #
-#################
-
-exec_always --no-startup-id nitrogen --restore

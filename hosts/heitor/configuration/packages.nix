@@ -10,7 +10,6 @@
     lsof
     lxqt.pavucontrol-qt
     neofetch
-    nitrogen
     vim
   ];
 }
