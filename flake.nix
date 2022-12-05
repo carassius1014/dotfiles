@@ -4,26 +4,33 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-22.11";
 
-    home-manager.url = "github:nix-community/home-manager/release-22.11";
-    home-manager.inputs.nixpkgs.follows = "nixpkgs";
+    home-manager = {
+      url = "github:nix-community/home-manager/release-22.11";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     nixpkgs-darwin.url = "github:nixos/nixpkgs/nixpkgs-22.11-darwin";
-    darwin.url = "github:lnl7/nix-darwin/master";
-    darwin.inputs.nixpkgs.follows = "nixpkgs-darwin";
+
+    darwin = {
+      url = "github:lnl7/nix-darwin/master";
+      inputs.nixpkgs.follows = "nixpkgs-darwin";
+    };
+
+    emacs-overlay = {
+      url = "github:nix-community/emacs-overlay";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     codex.url = "github:herp-inc/codex";
   };
 
-  outputs = inputs@{ nixpkgs, home-manager, darwin, codex, ... }: {
+  outputs = {self, nixpkgs, codex, ...}@inputs: {
     nixosConfigurations = {
-      heitor = import ./hosts/heitor { inherit nixpkgs home-manager codex; };
-      roland = import ./hosts/roland { inherit nixpkgs home-manager; };
+      heitor = import ./hosts/heitor inputs;
+      roland = import ./hosts/roland inputs;
     };
 
-    darwinConfigurations = {
-      GTPC22013 =
-        import ./hosts/miguel { inherit nixpkgs darwin home-manager codex; };
-    };
+    darwinConfigurations = { GTPC22013 = import ./hosts/miguel inputs; };
 
     devShell = (codex.eachSystem (system:
       let pkgs = nixpkgs.legacyPackages.${system};

@@ -1,4 +1,4 @@
-{ nixpkgs, home-manager, codex }:
+{ nixpkgs, home-manager, emacs-overlay, codex, ... }:
 
 nixpkgs.lib.nixosSystem {
   system = "x86_64-linux";
@@ -6,11 +6,13 @@ nixpkgs.lib.nixosSystem {
     ./configuration.nix
     home-manager.nixosModules.home-manager
     {
+      nixpkgs.overlays = [ emacs-overlay.overlay ];
       home-manager.useGlobalPkgs = true;
       home-manager.useUserPackages = true;
       home-manager.users.carassius1014 = let
-        pkgs = nixpkgs.legacyPackages.x86_64-linux;
-        codexHmModule = codex.hmModule.x86_64-linux;
+        sys = "x86_64-linux";
+        pkgs = nixpkgs.legacyPackages.${sys};
+        codexHmModule = codex.hmModule.${sys};
       in import ./home.nix { inherit pkgs codexHmModule; };
     }
   ];

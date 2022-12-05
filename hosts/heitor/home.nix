@@ -1,4 +1,4 @@
-{ pkgs, codexHmModule }:
+{ pkgs, codexHmModule}:
 
 {
   imports = [
@@ -12,6 +12,7 @@
     ../common/home/programs/git.nix
 
     ./home/alacritty.nix
+    ./home/emacs.nix
     ./home/fcitx5.nix
     ./home/rofi.nix
   ];
