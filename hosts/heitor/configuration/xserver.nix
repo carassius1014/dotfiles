@@ -21,7 +21,6 @@
         i3lock
         i3status
         i3-gaps
-        (polybar.override { i3Support = true; })
         rofi
       ];
     };

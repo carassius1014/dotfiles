@@ -139,9 +139,3 @@ bindsym $mod+r mode "resize"
 ############
 
 bindsym Ctrl+space exec rofi -show run -lines 3 -eh 2 -font "Sarasa Gothic CL 12"
-
-##################
-# - STATUS BAR - #
-##################
-
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh
