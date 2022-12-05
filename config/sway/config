@@ -9,7 +9,7 @@ set $mod Mod1
 ##################
 
 for_window [class="^.*"] border pixel 1
-new_window 1pixel
+default_border pixel 1
 
 #############
 # - MOUSE - #
@@ -105,7 +105,7 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+Shift+e exec sway exit
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -139,3 +139,16 @@ bindsym $mod+r mode "resize"
 ############
 
 bindsym Ctrl+space exec rofi -show run -lines 3 -eh 2 -font "Sarasa Gothic CL 12"
+
+output HDMI-A-3 pos 0 0 res 1920x1080 transform 270
+output HDMI-A-2 pos 1080 0 res 3840x2160 scale 2
+
+workspace 1 output HDMI-A-3
+workspace 2 output HDMI-A-2
+workspace 3 output HDMI-A-2
+workspace 4 output HDMI-A-2
+workspace 5 output HDMI-A-2
+workspace 6 output HDMI-A-2
+workspace 7 output HDMI-A-2
+workspace 8 output HDMI-A-2
+workspace 9 output HDMI-A-2

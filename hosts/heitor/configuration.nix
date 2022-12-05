@@ -20,6 +20,6 @@
     ./configuration/terminal.nix
     ./configuration/users.nix
     ./configuration/video.nix
-    ./configuration/xserver.nix
+    ./configuration/wayland.nix
   ];
 }

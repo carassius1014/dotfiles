@@ -13,6 +13,7 @@
 
     ./home/alacritty.nix
     ./home/fcitx5.nix
+    ./home/rofi.nix
   ];
 
   home = {
