@@ -24,6 +24,10 @@
       ws7 = "7";
       ws8 = "8";
       ws9 = "9";
+
+      # monitors
+      dell-U2414H = "HDMI-A-3";
+      dell-U2720QM = "HDMI-A-2";
     in {
       inherit terminal modifier up down left right;
 
@@ -85,20 +89,30 @@
       };
 
       output = {
-        # Dell U2720QM
-        HDMI-A-2 = {
-          pos = "1080 0";
-          res = "3840x2160";
-          scale = "2";
-        };
-
-        # Dell U2414H
-        HDMI-A-3 = {
+        "${dell-U2414H}" = {
           pos = "0 0";
           res = "1920x1080";
           transform = "270";
         };
+
+        "${dell-U2720QM}" = {
+          pos = "1080 0";
+          res = "3840x2160";
+          scale = "2";
+        };
       };
+
+      workspaceOutputAssign = [
+        { workspace = ws1; output = dell-U2414H; }
+        { workspace = ws2; output = dell-U2414H; }
+        { workspace = ws3; output = dell-U2720QM; }
+        { workspace = ws4; output = dell-U2720QM; }
+        { workspace = ws5; output = dell-U2720QM; }
+        { workspace = ws6; output = dell-U2720QM; }
+        { workspace = ws7; output = dell-U2720QM; }
+        { workspace = ws8; output = dell-U2720QM; }
+        { workspace = ws9; output = dell-U2720QM; }
+      ];
     };
 
     extraSessionCommands = ''
