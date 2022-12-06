@@ -5,8 +5,6 @@ let
     exec "${pkgs.greetd.gtkgreet}/bin/gtkgreet -l -c sway; swaymsg exit"
   '';
 in {
-  programs.sway.enable = true;
-
   services.greetd = {
     enable = true;
     settings = {

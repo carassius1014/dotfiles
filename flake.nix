@@ -24,7 +24,7 @@
     codex.url = "github:herp-inc/codex";
   };
 
-  outputs = {self, nixpkgs, codex, ...}@inputs: {
+  outputs = { self, nixpkgs, codex, ... }@inputs: {
     nixosConfigurations = {
       heitor = import ./hosts/heitor inputs;
       roland = import ./hosts/roland inputs;
