@@ -5,7 +5,7 @@
     enable = true;
 
     config = let
-      terminal = "${pkgs.foot}/bin/foot";
+      terminal = "${pkgs.kitty}/bin/kitty";
 
       # basic keys
       modifier = "Mod1";

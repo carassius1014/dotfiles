@@ -12,8 +12,8 @@
     ../common/home/programs/git.nix
 
     ./home/emacs.nix
-    ./home/foot.nix
     ./home/fcitx5.nix
+    ./home/kitty.nix
     ./home/rofi.nix
     ./home/sway.nix
   ];
