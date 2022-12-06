@@ -93,25 +93,56 @@
           pos = "0 0";
           res = "1920x1080";
           transform = "270";
+          bg =
+            "~/.dotfiles/wallpapers/claude-monet-rouen-cathedral-1080x1920.jpeg fill";
         };
 
         "${dell-U2720QM}" = {
           pos = "1080 0";
           res = "3840x2160";
           scale = "2";
+          bg =
+            "~/.dotfiles/wallpapers/claude-monet-water-lilies-4500x2122.jpeg fill";
         };
       };
 
       workspaceOutputAssign = [
-        { workspace = ws1; output = dell-U2414H; }
-        { workspace = ws2; output = dell-U2414H; }
-        { workspace = ws3; output = dell-U2720QM; }
-        { workspace = ws4; output = dell-U2720QM; }
-        { workspace = ws5; output = dell-U2720QM; }
-        { workspace = ws6; output = dell-U2720QM; }
-        { workspace = ws7; output = dell-U2720QM; }
-        { workspace = ws8; output = dell-U2720QM; }
-        { workspace = ws9; output = dell-U2720QM; }
+        {
+          workspace = ws1;
+          output = dell-U2414H;
+        }
+        {
+          workspace = ws2;
+          output = dell-U2414H;
+        }
+        {
+          workspace = ws3;
+          output = dell-U2720QM;
+        }
+        {
+          workspace = ws4;
+          output = dell-U2720QM;
+        }
+        {
+          workspace = ws5;
+          output = dell-U2720QM;
+        }
+        {
+          workspace = ws6;
+          output = dell-U2720QM;
+        }
+        {
+          workspace = ws7;
+          output = dell-U2720QM;
+        }
+        {
+          workspace = ws8;
+          output = dell-U2720QM;
+        }
+        {
+          workspace = ws9;
+          output = dell-U2720QM;
+        }
       ];
     };
 
