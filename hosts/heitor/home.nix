@@ -14,6 +14,8 @@
     ./home/emacs.nix
     ./home/fcitx5.nix
     ./home/kitty.nix
+    ./home/mako.nix
+    ./home/packages.nix
     ./home/rofi.nix
     ./home/sway.nix
   ];
@@ -21,37 +23,6 @@
   home = {
     username = "carassius1014";
     homeDirectory = "/home/carassius1014";
-
-    packages = with pkgs; [
-      black
-      dig
-      direnv
-      google-chrome
-      graphviz
-      fd
-      fzf
-      haskellPackages.hoogle
-      httpie
-      jq
-      nix-prefetch-git
-      nodejs
-      okular
-      p7zip
-      pdftk
-      python310
-      python310Packages.editorconfig
-      ripgrep
-      rlwrap
-      saml2aws
-      shellcheck
-      steam
-      symbola
-      texlive.combined.scheme-full
-      tree
-      unrar
-      unzip
-      whois
-    ];
 
     stateVersion = "22.05";
   };
