@@ -1,22 +1,24 @@
-{ pkgs, ... }:
-
+{ pkgs, lib, ... }:
 let
-  swayConfig = pkgs.writeText "greetd-sway-config" ''
-    exec "${pkgs.greetd.gtkgreet}/bin/gtkgreet -l -c sway; swaymsg exit"
+  swayRun = pkgs.writeShellScript "sway-run" ''
+    systemd-run --user --scope --collect --quiet --unit=sway \
+      systemd-cat --identifier=sway ${pkgs.sway}/bin/sway $@
   '';
 in {
   services.greetd = {
     enable = true;
+    restart = false;
     settings = {
       default_session = {
-        command = "${pkgs.sway}/bin/sway --config ${swayConfig}";
+        command = "${
+            lib.makeBinPath [ pkgs.greetd.tuigreet ]
+          }/tuigreet --remember --time --cmd ${swayRun}";
+        user = "greeter";
+      };
+      initial_session = {
+        command = "${swayRun}";
+        user = "carassius1014";
       };
     };
   };
-
-  environment.etc."greetd/environments".text = ''
-    sway
-    fish
-    bash
-  '';
 }
