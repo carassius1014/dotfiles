@@ -1,8 +1,9 @@
 { pkgs, ... }:
 
-{
+let gctx = import ../../context.nix { inherit pkgs; };
+in {
   programs.mako = {
     enable = true;
-    font = "Sarasa UI J Light 14";
+    font = "${gctx.fonts.ui} 14";
   };
 }

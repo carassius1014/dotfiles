@@ -1,12 +1,11 @@
 { pkgs, ... }:
 
-{
+let ctx = import ../context.nix { inherit pkgs; };
+in {
   wayland.windowManager.sway = {
     enable = true;
 
     config = let
-      terminal = "${pkgs.kitty}/bin/kitty";
-
       # basic keys
       modifier = "Mod1";
       up = "k";
@@ -24,16 +23,12 @@
       ws7 = "7";
       ws8 = "8";
       ws9 = "9";
-
-      # monitors
-      dell-U2414H = "HDMI-A-3";
-      dell-U2720QM = "HDMI-A-2";
     in {
-      inherit terminal modifier up down left right;
+      inherit modifier up down left right;
 
       keybindings = {
         # start a terminal
-        "${modifier}+Return" = "exec ${terminal}";
+        "${modifier}+Return" = "exec ${ctx.terminal}";
 
         # start launcher
         "Ctrl+space" = "exec ${pkgs.rofi-wayland}/bin/rofi -show run";
@@ -89,7 +84,7 @@
       };
 
       output = {
-        "${dell-U2414H}" = {
+        "${ctx.monitors.dell-U2414H}" = {
           pos = "0 0";
           res = "1920x1080";
           transform = "270";
@@ -97,7 +92,7 @@
             "~/.dotfiles/wallpapers/claude-monet-rouen-cathedral-1080x1920.jpeg fill";
         };
 
-        "${dell-U2720QM}" = {
+        "${ctx.monitors.dell-U2720QM}" = {
           pos = "1080 0";
           res = "3840x2160";
           scale = "2";
@@ -109,39 +104,39 @@
       workspaceOutputAssign = [
         {
           workspace = ws1;
-          output = dell-U2414H;
+          output = ctx.monitors.dell-U2414H;
         }
         {
           workspace = ws2;
-          output = dell-U2414H;
+          output = ctx.monitors.dell-U2414H;
         }
         {
           workspace = ws3;
-          output = dell-U2720QM;
+          output = ctx.monitors.dell-U2720QM;
         }
         {
           workspace = ws4;
-          output = dell-U2720QM;
+          output = ctx.monitors.dell-U2720QM;
         }
         {
           workspace = ws5;
-          output = dell-U2720QM;
+          output = ctx.monitors.dell-U2720QM;
         }
         {
           workspace = ws6;
-          output = dell-U2720QM;
+          output = ctx.monitors.dell-U2720QM;
         }
         {
           workspace = ws7;
-          output = dell-U2720QM;
+          output = ctx.monitors.dell-U2720QM;
         }
         {
           workspace = ws8;
-          output = dell-U2720QM;
+          output = ctx.monitors.dell-U2720QM;
         }
         {
           workspace = ws9;
-          output = dell-U2720QM;
+          output = ctx.monitors.dell-U2720QM;
         }
       ];
     };
