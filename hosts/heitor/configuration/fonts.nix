@@ -5,6 +5,7 @@
     fonts = with pkgs; [
       emacs-all-the-icons-fonts
       fira-code
+      font-awesome
       liberation_ttf
       noto-fonts
       sarasa-gothic

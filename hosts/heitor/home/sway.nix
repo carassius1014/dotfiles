@@ -23,6 +23,8 @@ in {
       ws7 = "7";
       ws8 = "8";
       ws9 = "9";
+
+      status-bar = "${pkgs.waybar}/bin/waybar";
     in {
       inherit modifier up down left right;
 
@@ -139,6 +141,13 @@ in {
           output = ctx.monitors.dell-U2720QM;
         }
       ];
+
+      bars = [{ command = status-bar; }];
+
+      startup = [{
+        command = "systemctl --user restart ${status-bar}";
+        always = true;
+      }];
     };
   };
 }

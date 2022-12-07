@@ -18,6 +18,7 @@
     ./home/packages.nix
     ./home/rofi.nix
     ./home/sway.nix
+    ./home/waybar
   ];
 
   home = {
