@@ -1,4 +1,4 @@
-{ nixpkgs, darwin, home-manager, codex }:
+{ nixpkgs, darwin, home-manager, codex, ... }:
 
 darwin.lib.darwinSystem {
   system = "aarch64-darwin";
