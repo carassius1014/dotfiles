@@ -33,9 +33,22 @@
     darwinConfigurations = { GTPC22013 = import ./hosts/miguel inputs; };
 
     devShell = (codex.eachSystem (system:
-      let pkgs = nixpkgs.legacyPackages.${system};
+      let
+        pkgs = nixpkgs.legacyPackages.${system};
+        ghcVersion = "ghc925";
+        dotfiles-cli = import ./cli { inherit pkgs ghcVersion; };
       in {
-        shell = pkgs.mkShell { buildInputs = with pkgs; [ nixfmt ]; };
+        shell = pkgs.mkShell {
+          buildInputs = with pkgs; [
+            cabal-install
+            dotfiles-cli
+            ghcid
+            pkgs.haskell.compiler.${ghcVersion}
+            haskell.packages.${ghcVersion}.fourmolu
+            hpack
+            nixfmt
+          ];
+        };
       })).shell;
   };
 }

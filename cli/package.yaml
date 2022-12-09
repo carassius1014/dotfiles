@@ -1,0 +1,56 @@
+name: dotfiles-cli
+
+ghc-options:
+  - -Werror
+  - -Weverything
+  - -Wno-all-missed-specialisations
+  - -Wno-incomplete-uni-patterns
+  - -Wno-missed-specialisations
+  - -Wno-missing-export-lists
+  - -Wno-missing-import-lists
+  - -Wno-missing-kind-signatures
+  - -Wno-missing-local-signatures
+  - -Wno-missing-safe-haskell-mode
+  - -Wno-monomorphism-restriction
+  - -Wno-name-shadowing
+  - -Wno-partial-fields
+  - -Wno-prepositive-qualified-module
+  - -Wno-redundant-constraints
+  - -Wno-unsafe
+  - -Wno-unused-type-patterns
+
+default-extensions:
+  - DerivingStrategies
+  - DerivingVia
+  - DuplicateRecordFields
+  - ExplicitNamespaces
+  - FunctionalDependencies
+  - GHC2021
+  - LambdaCase
+  - MultiWayIf
+  - NegativeLiterals
+  - NoFieldSelectors
+  - NoImplicitPrelude
+  - OverloadedRecordDot
+  - OverloadedStrings
+  - PackageImports
+  - RecordWildCards
+  - Strict
+
+library:
+  source-dirs:
+    - lib
+  dependencies:
+    - base
+
+executables:
+  dotfiles:
+    source-dirs:
+      - app
+    main: main.hs
+    dependencies:
+      - base
+    ghc-options:
+      - -j
+      - -rtsopts
+      - -threaded
