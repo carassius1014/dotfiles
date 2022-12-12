@@ -18,6 +18,7 @@ ghc-options:
   - -Wno-redundant-constraints
   - -Wno-unsafe
   - -Wno-unused-type-patterns
+  - -j
 
 default-extensions:
   - DerivingStrategies
@@ -41,7 +42,13 @@ library:
   source-dirs:
     - lib
   dependencies:
+    - JuicyPixels
     - base
+    - colour
+    - optparse-generic
+    - relude
+    - rio
+    - vector
 
 executables:
   dotfiles:
@@ -50,6 +57,7 @@ executables:
     main: main.hs
     dependencies:
       - base
+      - dotfiles-cli
     ghc-options:
       - -j
       - -rtsopts

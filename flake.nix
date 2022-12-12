@@ -21,6 +21,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    cli = {
+      url = "path:./cli";
+      flake = false;
+    };
+
     codex.url = "github:herp-inc/codex";
   };
 
@@ -36,18 +41,19 @@
       let
         pkgs = nixpkgs.legacyPackages.${system};
         ghcVersion = "ghc925";
-        dotfiles-cli = import ./cli { inherit pkgs ghcVersion; };
+        dotfiles-cli = import inputs.cli { inherit pkgs ghcVersion; };
       in {
         shell = pkgs.mkShell {
-          buildInputs = with pkgs; [
-            cabal-install
-            dotfiles-cli
-            ghcid
-            pkgs.haskell.compiler.${ghcVersion}
-            haskell.packages.${ghcVersion}.fourmolu
-            hpack
-            nixfmt
-          ];
+          buildInputs = with pkgs;
+            [ nixfmt ] ++ lib.lists.optionals (system == "x86_64-linux") [
+              cabal-install
+              dotfiles-cli
+              ghcid
+              haskell.compiler.${ghcVersion}
+              haskell.packages.${ghcVersion}.fourmolu
+              hpack
+              zlib
+            ];
         };
       })).shell;
   };

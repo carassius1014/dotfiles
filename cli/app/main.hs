@@ -1,4 +1,13 @@
-import "base" Prelude
+import Dotfiles.Prelude
+
+import Dotfiles.Handlers.GeneratePalette qualified as GeneratePalette
+import Dotfiles.Options
+    ( Options (..)
+    , getOptions
+    )
 
 main :: IO ()
-main = error "not implemented!"
+main = do
+    options <- getOptions
+    case options of
+        GeneratePalette path -> GeneratePalette.handler path
