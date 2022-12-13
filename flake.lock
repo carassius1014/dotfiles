@@ -139,7 +139,7 @@
       "flake": false,
       "locked": {
         "lastModified": 1,
-        "narHash": "sha256-naPYdRA61rjOzsLNgJS9pCZfdibn5xbJs1rqmLJjhWM=",
+        "narHash": "sha256-l9/1q8lcSKHhYDccWueRZh/u2zizFsgCWj7+z4mUD2M=",
         "path": "./cli",
         "type": "path"
       },

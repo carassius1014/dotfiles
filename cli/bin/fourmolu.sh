@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 fourmolu \
-    --stdin-input-file /Users/carassius1014/.dotfiles/cli/dotfiles-cli.cabal \
+    --stdin-input-file "$HOME"/.dotfiles/cli/dotfiles-cli.cabal \
 	  -o -XDerivingStrategies \
 	  -o -XDerivingVia \
 	  -o -XDuplicateRecordFields \
