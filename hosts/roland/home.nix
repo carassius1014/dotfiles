@@ -1,6 +1,7 @@
 { pkgs }:
 
-{
+let gctx = import ../context.nix { inherit pkgs; };
+in {
   imports = [
     ../common/home/programs
     ../common/home/programs/direnv.nix
@@ -10,8 +11,8 @@
   ];
 
   home = {
-    username = "carassius1014";
-    homeDirectory = "/home/carassius1014";
+    username = gctx.me.name;
+    homeDirectory = "/home/${gctx.me.name}";
 
     packages = with pkgs; [ httpie jq python310 ];
 

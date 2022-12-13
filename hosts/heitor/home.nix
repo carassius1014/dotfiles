@@ -1,6 +1,7 @@
 { pkgs, codexHmModule }:
 
-{
+let gctx = import ../context.nix { inherit pkgs; };
+in {
   imports = [
     codexHmModule
 
@@ -22,8 +23,8 @@
   ];
 
   home = {
-    username = "carassius1014";
-    homeDirectory = "/home/carassius1014";
+    username = gctx.me.name;
+    homeDirectory = "/home/${gctx.me.name}";
 
     stateVersion = "22.05";
   };

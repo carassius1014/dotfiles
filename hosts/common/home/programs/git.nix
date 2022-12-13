@@ -1,8 +1,11 @@
-{
+{ pkgs, ... }:
+
+let gctx = import ../../../context.nix { inherit pkgs; };
+in {
   programs.git = {
     enable = true;
-    userName = "Jiyu Zhou";
-    userEmail = "carassius1014@gmail.com";
+    userName = gctx.me.realName;
+    userEmail = gctx.me.email;
     ignores = [ ".direnv" ];
     extraConfig = { init = { defaultBranch = "master"; }; };
   };

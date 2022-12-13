@@ -1,5 +1,8 @@
 { pkgs, lib, ... }:
+
 let
+  gctx = import ../../context.nix { inherit pkgs; };
+
   swayRun = pkgs.writeShellScript "sway-run" ''
     systemd-run --user --scope --collect --quiet --unit=sway \
       systemd-cat --identifier=sway ${pkgs.sway}/bin/sway $@
@@ -17,7 +20,7 @@ in {
       };
       initial_session = {
         command = "${swayRun}";
-        user = "carassius1014";
+        user = gctx.me.name;
       };
     };
   };

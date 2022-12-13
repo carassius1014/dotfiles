@@ -1,7 +1,10 @@
-{
+{ pkgs, ... }:
+
+let gctx = import ../../context.nix { inherit pkgs; };
+in {
   security.acme = {
     acceptTerms = true;
-    defaults.email = "carassius1014@gmail.com";
+    defaults.email = gctx.me.email;
   };
 
   services.nginx = {
@@ -10,7 +13,7 @@
       "carassius1014.io" = {
         addSSL = true;
         enableACME = true;
-        root = "/home/carassius1014/www";
+        root = "/home/${gctx.me.name}/www";
       };
     };
   };

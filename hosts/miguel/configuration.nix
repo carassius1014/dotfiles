@@ -1,6 +1,7 @@
 { config, pkgs, lib, ... }:
 
-{
+let gctx = import ../context.nix { inherit pkgs; };
+in {
   imports =
     [ ../common/configuration/emacs.nix ../common/configuration/nix.nix ];
 
@@ -18,13 +19,13 @@
 
   programs.fish.enable = true;
   environment.shells = [ pkgs.fish ];
-  users.users.carassius1014 = {
-    home = "/Users/carassius1014";
+  users.users.${gctx.me.name} = {
+    home = "/Users/${gctx.me.name}";
     shell = pkgs.fish;
   };
   system.activationScripts.postActivation.text = ''
     # Set the default shell as fish for the user. MacOS doesn't do this like nixOS does
-    sudo chsh -s ${lib.getBin pkgs.fish}/bin/fish carassius1014
+    sudo chsh -s ${lib.getBin pkgs.fish}/bin/fish ${gctx.me.name}
   '';
 
   fonts.fontDir.enable = true;
