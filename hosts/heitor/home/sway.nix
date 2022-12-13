@@ -144,6 +144,11 @@ in {
 
       bars = [{ command = status-bar; }];
 
+      gaps = {
+        inner = 6;
+        outer = 6;
+      };
+
       startup = [{
         command = "systemctl --user restart ${status-bar}";
         always = true;
