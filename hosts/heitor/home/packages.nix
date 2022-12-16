@@ -31,5 +31,6 @@
     unrar
     unzip
     whois
+    xdg-utils
   ];
 }
