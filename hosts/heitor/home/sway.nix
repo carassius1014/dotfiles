@@ -28,6 +28,8 @@ in {
     in {
       inherit modifier up down left right;
 
+      focus.followMouse = "no";
+
       keybindings = {
         # start a terminal
         "${modifier}+Return" = "exec ${ctx.terminal}";
