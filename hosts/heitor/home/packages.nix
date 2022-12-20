@@ -5,7 +5,6 @@
     black
     dig
     direnv
-    google-chrome
     graphviz
     fd
     fzf

@@ -14,6 +14,7 @@ in {
 
     ./home/emacs.nix
     ./home/fcitx5.nix
+    ./home/firefox.nix
     ./home/kitty.nix
     ./home/mako.nix
     ./home/packages.nix

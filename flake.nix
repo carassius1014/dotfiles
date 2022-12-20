@@ -21,12 +21,14 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    nur.url = "github:nix-community/NUR";
+
+    codex.url = "github:herp-inc/codex";
+
     cli = {
       url = "path:./cli";
       flake = false;
     };
-
-    codex.url = "github:herp-inc/codex";
   };
 
   outputs = { self, nixpkgs, codex, ... }@inputs: {
