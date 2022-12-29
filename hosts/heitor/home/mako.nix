@@ -1,8 +1,6 @@
 { pkgs, ... }:
 
-let
-  ctx = import ../context.nix { inherit pkgs; };
-  gctx = import ../../context.nix { inherit pkgs; };
+let inherit (pkgs) ctx gctx;
 in {
   programs.mako = {
     enable = true;

@@ -1,6 +1,6 @@
 { pkgs, codexHmModule }:
 
-let gctx = import ../context.nix { inherit pkgs; };
+let inherit (pkgs) gctx;
 in {
   imports = [
     codexHmModule

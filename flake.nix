@@ -32,12 +32,26 @@
   };
 
   outputs = { self, nixpkgs, codex, ... }@inputs: {
-    nixosConfigurations = {
-      heitor = import ./hosts/heitor inputs;
-      roland = import ./hosts/roland inputs;
+    nixosConfigurations = let
+      system = "x86_64-linux";
+      pkgs = import nixpkgs {
+        inherit system;
+        overlays = [ (import ./hosts/common/overlays/context.nix) ];
+      };
+    in {
+      heitor = import ./hosts/heitor (inputs // { inherit pkgs system; });
+      roland = import ./hosts/roland (inputs // { inherit pkgs system; });
     };
 
-    darwinConfigurations = { GTPC22013 = import ./hosts/miguel inputs; };
+    darwinConfigurations = let
+      system = "aarch64-darwin";
+      pkgs = import nixpkgs {
+        inherit system;
+        overlays = [ (import ./hosts/common/overlays/context.nix) ];
+      };
+    in {
+      GTPC22013 = import ./hosts/miguel (inputs // { inherit pkgs system; });
+    };
 
     devShell = (codex.eachSystem (system:
       let

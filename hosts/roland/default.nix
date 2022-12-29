@@ -1,9 +1,6 @@
-{ nixpkgs, home-manager, ... }:
+{ nixpkgs, pkgs, system, home-manager, ... }:
 
-let
-  system = "x86_64-linux";
-  pkgs = nixpkgs.legacyPackages.${system};
-  gctx = import ../context.nix { inherit pkgs; };
+let inherit (pkgs) gctx;
 in nixpkgs.lib.nixosSystem {
   inherit system;
   modules = [

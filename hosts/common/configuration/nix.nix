@@ -1,6 +1,8 @@
 { pkgs, lib, ... }:
 
-let gctx = import ../../context.nix { inherit pkgs; };
+let
+  gctx-overlay = import ../overlays/context.nix;
+  inherit (pkgs) gctx;
 in {
   nix = {
     settings = {
@@ -32,5 +34,8 @@ in {
     '';
   };
 
-  nixpkgs.config.allowUnfree = true;
+  nixpkgs = {
+    config.allowUnfree = true;
+    overlays = [ gctx-overlay ];
+  };
 }

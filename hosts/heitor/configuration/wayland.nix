@@ -1,7 +1,7 @@
 { pkgs, lib, ... }:
 
 let
-  gctx = import ../../context.nix { inherit pkgs; };
+  inherit (pkgs) gctx;
 
   swayRun = pkgs.writeShellScript "sway-run" ''
     systemd-run --user --scope --collect --quiet --unit=sway \

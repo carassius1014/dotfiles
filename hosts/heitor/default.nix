@@ -1,9 +1,8 @@
-{ nixpkgs, home-manager, emacs-overlay, nur, codex, ... }:
+{ nixpkgs, pkgs, system, home-manager, emacs-overlay, nur, codex, ... }:
 
 let
-  system = "x86_64-linux";
-  pkgs = nixpkgs.legacyPackages.${system};
-  gctx = import ../context.nix { inherit pkgs; };
+  ctx-overlay = import ./overlays/context.nix;
+  inherit (pkgs) gctx;
 in nixpkgs.lib.nixosSystem {
   inherit system;
   modules = [
@@ -13,7 +12,7 @@ in nixpkgs.lib.nixosSystem {
 
     home-manager.nixosModules.home-manager
     {
-      nixpkgs.overlays = [ emacs-overlay.overlay nur.overlay ];
+      nixpkgs.overlays = [ ctx-overlay emacs-overlay.overlay nur.overlay ];
       home-manager.useGlobalPkgs = true;
       home-manager.useUserPackages = true;
       home-manager.users.${gctx.me.name} = import ./home.nix {

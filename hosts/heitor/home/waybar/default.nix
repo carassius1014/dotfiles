@@ -1,6 +1,6 @@
 { pkgs, ... }:
 
-let ctx = import ../../context.nix { inherit pkgs; };
+let inherit (pkgs) ctx;
 in {
   programs.waybar = {
     enable = true;

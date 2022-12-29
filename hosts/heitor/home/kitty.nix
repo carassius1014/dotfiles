@@ -1,6 +1,6 @@
 { pkgs, ... }:
 
-let gctx = import ../../context.nix { inherit pkgs; };
+let inherit (pkgs) gctx;
 in {
   programs.kitty = {
     enable = true;

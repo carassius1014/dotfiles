@@ -1,6 +1,6 @@
 { config, pkgs, lib, ... }:
 
-let gctx = import ../context.nix { inherit pkgs; };
+let inherit (pkgs) gctx;
 in {
   imports =
     [ ../common/configuration/emacs.nix ../common/configuration/nix.nix ];

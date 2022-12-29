@@ -1,6 +1,6 @@
 { pkgs, ... }:
 
-let gctx = import ../../context.nix { inherit pkgs; };
+let inherit (pkgs) gctx;
 in {
   security.acme = {
     acceptTerms = true;
