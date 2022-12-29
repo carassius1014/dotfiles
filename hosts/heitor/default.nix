@@ -1,10 +1,12 @@
-{ nixpkgs, pkgs, system, home-manager, emacs-overlay, nur, codex, ... }:
+{ nixpkgs, pkgs, system, home-manager, emacs-overlay, nur, nix-colors, codex
+, ... }:
 
 let
-  ctx-overlay = import ./overlays/context.nix;
+  ctx-overlay = import ./overlays/context.nix { inherit nix-colors; };
   inherit (pkgs) gctx;
 in nixpkgs.lib.nixosSystem {
   inherit system;
+
   modules = [
     ./configuration.nix
 

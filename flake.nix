@@ -25,6 +25,8 @@
 
     codex.url = "github:herp-inc/codex";
 
+    nix-colors.url = "github:misterio77/nix-colors";
+
     cli = {
       url = "path:./cli";
       flake = false;

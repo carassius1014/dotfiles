@@ -1,6 +1,6 @@
 { pkgs, ... }:
 
-let inherit (pkgs) gctx;
+let inherit (pkgs) ctx gctx;
 in {
   programs.kitty = {
     enable = true;
@@ -10,7 +10,10 @@ in {
       size = 14;
     };
 
-    settings = {
+    settings = let palette = ctx.themes.rouen-catheral.colors;
+    in {
+      foreground = "#${palette.base05}";
+      background = "#${palette.base00}";
       window_padding_width = 12;
       background_opacity = "0.8";
     };
