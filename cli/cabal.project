@@ -1,8 +1,0 @@
-with-compiler: ghc-9.2.5
-
-packages:
-  .
-
-index-state: 2022-12-09T00:00:00Z
-
-import: https://www.stackage.org/lts-20.3/cabal.config

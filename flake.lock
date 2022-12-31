@@ -151,19 +151,6 @@
         "type": "github"
       }
     },
-    "cli": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1,
-        "narHash": "sha256-l9/1q8lcSKHhYDccWueRZh/u2zizFsgCWj7+z4mUD2M=",
-        "path": "./cli",
-        "type": "path"
-      },
-      "original": {
-        "path": "./cli",
-        "type": "path"
-      }
-    },
     "codex": {
       "inputs": {
         "clap4shell": "clap4shell",
@@ -715,7 +702,6 @@
     },
     "root": {
       "inputs": {
-        "cli": "cli",
         "codex": "codex",
         "darwin": "darwin",
         "emacs-overlay": "emacs-overlay",
