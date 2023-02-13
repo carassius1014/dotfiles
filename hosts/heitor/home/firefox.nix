@@ -6,7 +6,6 @@
     package = pkgs.firefox-devedition-bin;
 
     extensions = with pkgs.nur.repos.rycee.firefox-addons; [
-      https-everywhere
       onepassword-password-manager
       ublock-origin
     ];

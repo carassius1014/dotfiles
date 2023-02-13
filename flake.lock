@@ -157,19 +157,16 @@
         "flake-compat": "flake-compat_2",
         "flake-utils": "flake-utils_2",
         "haskellNix": "haskellNix",
-        "nixpkgs": [
-          "codex",
-          "haskellNix",
-          "nixpkgs-unstable"
-        ],
+        "nix": "nix_2",
+        "nixpkgs": "nixpkgs_3",
         "telepresence-pkgs": "telepresence-pkgs"
       },
       "locked": {
-        "lastModified": 1672132178,
-        "narHash": "sha256-398zGuKrwxbwwTxW/AKTh+u/rn0FWe34Q5Do1PpGsvw=",
+        "lastModified": 1675926893,
+        "narHash": "sha256-NEJ5S9NHKButUxnocwnr7vSdCEigOe+DHtwltGfvA+8=",
         "owner": "herp-inc",
         "repo": "codex",
-        "rev": "5bd97434e79276f508c2d456b06322d2ecbd72c1",
+        "rev": "c97e57fe0c9637b00f903722669f2384bdafeef3",
         "type": "github"
       },
       "original": {
@@ -207,11 +204,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1672511436,
-        "narHash": "sha256-31i+SGmBdZTLz9BsCB5dOXff/xe+tei5sujgdrSJIss=",
+        "lastModified": 1676258056,
+        "narHash": "sha256-LhXVnPc+IPHupy7QexUrzYuloSGXvXEgvIkAlhFs+yY=",
         "owner": "nix-community",
         "repo": "emacs-overlay",
-        "rev": "3c1fbbbe250bde48a947099ae61534f018290ff4",
+        "rev": "09ebba158540ba3171b5f319b71427b51db8794b",
         "type": "github"
       },
       "original": {
@@ -385,11 +382,11 @@
         "utils": "utils"
       },
       "locked": {
-        "lastModified": 1672244468,
-        "narHash": "sha256-xaZb8AZqoXRCSqPusCk4ouf+fUNP8UJdafmMTF1Ltlw=",
+        "lastModified": 1674440933,
+        "narHash": "sha256-CASRcD/rK3fn5vUCti3jzry7zi0GsqRsBohNq9wPgLs=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "89a8ba0b5b43b3350ff2e3ef37b66736b2ef8706",
+        "rev": "65c47ced082e3353113614f77b1bc18822dc731f",
         "type": "github"
       },
       "original": {
@@ -492,6 +489,22 @@
       "original": {
         "owner": "misterio77",
         "repo": "nix-colors",
+        "type": "github"
+      }
+    },
+    "nix_2": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1673254186,
+        "narHash": "sha256-hpPoGd5KF5rUiuCc3bPkkh4dAMk1FNl3J7VHcIXhefc=",
+        "owner": "NixOS",
+        "repo": "nix",
+        "rev": "89ef26664d3339a89afa8dfa762326cf196d1622",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "repo": "nix",
         "type": "github"
       }
     },
@@ -654,11 +667,26 @@
     },
     "nixpkgs_3": {
       "locked": {
-        "lastModified": 1672353432,
-        "narHash": "sha256-oZfgp/44/o2tWiylV30cR+DLyWTJ+5dhsdWZVpzs3e4=",
+        "lastModified": 1675844841,
+        "narHash": "sha256-k+o0bbdjDP4rr8H+ouvghjaXUV7dWsK73x5iDm/FaEo=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "34b11b8d108a398a75033585ceb8f6fdfa1ef45b",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs_4": {
+      "locked": {
+        "lastModified": 1676177817,
+        "narHash": "sha256-OQnBnuKkpwkfNY31xQyfU5hNpLs1ilWt+hVY6ztEEOM=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "913a47cd064cc06440ea84e5e0452039a85781f0",
+        "rev": "1b82144edfcd0c86486d2e07c7298f85510e7fb8",
         "type": "github"
       },
       "original": {
@@ -670,11 +698,11 @@
     },
     "nur": {
       "locked": {
-        "lastModified": 1672512268,
-        "narHash": "sha256-vcAYow0GaOpcsOVwkJIxMUr8uP/N6Kjxacrt6KpBGWc=",
+        "lastModified": 1676261409,
+        "narHash": "sha256-MHMGy3/jBc7wd/YKddICbgpCJ2qAtjjmlZQFFHCUFr8=",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "37f0d22dae47ec66b6d880a42a96b0c798ee1fb7",
+        "rev": "c7011355e75a4a1818768ce1ac4c1aa5ada7eb6f",
         "type": "github"
       },
       "original": {
@@ -707,7 +735,7 @@
         "emacs-overlay": "emacs-overlay",
         "home-manager": "home-manager",
         "nix-colors": "nix-colors",
-        "nixpkgs": "nixpkgs_3",
+        "nixpkgs": "nixpkgs_4",
         "nixpkgs-darwin": "nixpkgs-darwin",
         "nur": "nur"
       }
