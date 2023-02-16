@@ -16,6 +16,7 @@
     nodejs
     okular
     p7zip
+    plantuml
     pdftk
     python310
     python310Packages.editorconfig

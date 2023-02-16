@@ -60,6 +60,7 @@
        markdown
        nix
        org
+       plantuml
        protobuf
        purescript
        python
