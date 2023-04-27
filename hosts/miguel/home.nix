@@ -18,6 +18,7 @@
       nixfmt
       python310Packages.editorconfig
       ripgrep
+      tree
       zstd
     ];
 
