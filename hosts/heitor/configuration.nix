@@ -4,7 +4,6 @@
   imports = [
     /etc/nixos/hardware-configuration.nix
 
-    ../common/configuration/emacs.nix
     ../common/configuration/nix.nix
 
     ./configuration/audio.nix

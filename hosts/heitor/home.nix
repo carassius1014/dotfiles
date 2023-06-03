@@ -6,13 +6,13 @@ in {
     codexHmModule
 
     ../common/home/codex.nix
+    ../common/home/emacs.nix
     ../common/home/programs
     ../common/home/programs/direnv.nix
     ../common/home/programs/fish.nix
     ../common/home/programs/gh.nix
     ../common/home/programs/git.nix
 
-    ./home/emacs.nix
     ./home/fcitx5.nix
     ./home/firefox.nix
     ./home/kitty.nix
