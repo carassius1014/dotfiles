@@ -22,9 +22,11 @@
       haskell.packages.${ghcVersion}.hoogle
       jq
       nixfmt
+      nodejs
       python310Packages.editorconfig
       ripgrep
       tree
+      yarn
       zstd
     ];
 
