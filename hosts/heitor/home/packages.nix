@@ -38,5 +38,6 @@
       unzip
       whois
       xdg-utils
+      yarn
     ];
 }
