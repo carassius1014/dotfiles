@@ -6,7 +6,7 @@ in {
 
   # List packages installed in system profile. To search by name, run:
   # $ nix-env -qaP | grep wget
-  environment.systemPackages = with pkgs; [ coreutils fd fontconfig ];
+  environment.systemPackages = with pkgs; [ coreutils-prefixed fd fontconfig ];
 
   # Use a custom configuration.nix location.
   # $ darwin-rebuild switch -I darwin-config=$HOME/.config/nixpkgs/darwin/configuration.nix
