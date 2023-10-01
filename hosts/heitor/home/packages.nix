@@ -16,7 +16,6 @@
       haskell.packages.${ghcVersion}.ghcid
       haskell.packages.${ghcVersion}.hoogle
       httpie
-      jq
       libnotify
       nix-prefetch-git
       nodejs
