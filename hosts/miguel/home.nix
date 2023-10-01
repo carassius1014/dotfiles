@@ -20,7 +20,6 @@
       haskell.packages.${ghcVersion}.fourmolu
       haskell.packages.${ghcVersion}.ghcid
       haskell.packages.${ghcVersion}.hoogle
-      jq
       nixfmt
       nodejs
       python310Packages.editorconfig
