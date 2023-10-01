@@ -38,22 +38,22 @@
 
       browser_default = {
         description = "Start Browser using the default profile";
-        body = "firefox-devedition -P dev-edition-default";
+        body = "firefox-developer-edition -P dev-edition-default";
       };
 
       browser_work = {
         description = "Start Browser using the work profile";
-        body = "firefox-devedition -P work";
+        body = "firefox-developer-edition -P work";
       };
 
       browser_home = {
         description = "Start Browser using the home profile";
-        body = "firefox-devedition -P home";
+        body = "firefox-developer-edition -P home";
       };
 
       browser_private = {
         description = "Start Browser using the private profile";
-        body = "firefox-devedition -P private";
+        body = "firefox-developer-edition -P private";
       };
 
       fish_prompt = {
