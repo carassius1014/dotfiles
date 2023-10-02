@@ -1,4 +1,4 @@
-{ pkgs, system, darwin, home-manager, emacs-overlay, codex, ... }:
+{ pkgs, system, darwin, home-manager, codex, ... }:
 
 let inherit (pkgs) gctx;
 in darwin.lib.darwinSystem {
@@ -7,7 +7,6 @@ in darwin.lib.darwinSystem {
     ./configuration.nix
     home-manager.darwinModules.home-manager
     {
-      nixpkgs.overlays = [ emacs-overlay.overlay ];
       home-manager.useGlobalPkgs = true;
       home-manager.useUserPackages = true;
       home-manager.users.${gctx.me.name} = import ./home.nix {

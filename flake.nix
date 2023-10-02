@@ -16,11 +16,6 @@
       inputs.nixpkgs.follows = "nixpkgs-darwin";
     };
 
-    emacs-overlay = {
-      url = "github:nix-community/emacs-overlay";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     nur.url = "github:nix-community/NUR";
 
     codex.url = "github:herp-inc/codex";

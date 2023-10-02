@@ -1,4 +1,4 @@
-{ nixpkgs, pkgs, system, home-manager, emacs-overlay, nur, nix-colors, codex
+{ nixpkgs, pkgs, system, home-manager, nur, nix-colors, codex
 , ... }:
 
 let
@@ -14,7 +14,7 @@ in nixpkgs.lib.nixosSystem {
 
     home-manager.nixosModules.home-manager
     {
-      nixpkgs.overlays = [ ctx-overlay emacs-overlay.overlay nur.overlay ];
+      nixpkgs.overlays = [ ctx-overlay nur.overlay ];
       home-manager.useGlobalPkgs = true;
       home-manager.useUserPackages = true;
       home-manager.users.${gctx.me.name} = import ./home.nix {
