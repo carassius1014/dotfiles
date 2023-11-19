@@ -1,7 +1,11 @@
 { pkgs, ... }:
 
 {
-  home.packages = with pkgs; [
+  home.packages = let
+    haskellPackages =
+      (import ../../common/home/packages.nix { inherit pkgs; }).haskellPackages;
+  in with pkgs;
+  [
     black
     cabal-install
     dig
@@ -32,5 +36,5 @@
     whois
     xdg-utils
     yarn
-  ];
+  ] ++ haskellPackages;
 }
