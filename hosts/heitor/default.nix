@@ -1,5 +1,4 @@
-{ nixpkgs, pkgs, system, home-manager, nur, nix-colors, codex
-, ... }:
+{ nixpkgs, pkgs, system, home-manager, nur, nix-colors, codex, ... }:
 
 let
   ctx-overlay = import ./overlays/context.nix { inherit nix-colors; };
