@@ -15,6 +15,7 @@
     fzf
     httpie
     libnotify
+    ngrok
     nix-prefetch-git
     nodejs
     okular
