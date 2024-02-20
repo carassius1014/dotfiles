@@ -20,8 +20,6 @@
     nodejs
     okular
     p7zip
-    plantuml
-    pdftk
     python310
     python310Packages.editorconfig
     ripgrep
@@ -30,7 +28,6 @@
     shellcheck
     steam
     symbola
-    texlive.combined.scheme-full
     tree
     unrar
     unzip
