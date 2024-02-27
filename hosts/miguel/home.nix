@@ -12,14 +12,9 @@
     ../common/home/programs/git.nix
   ];
 
-  home = let ghcVersion = "ghc927";
-  in {
+  home = {
     packages = with pkgs; [
       cachix
-      haskell.compiler.${ghcVersion}
-      haskell.packages.${ghcVersion}.fourmolu
-      haskell.packages.${ghcVersion}.ghcid
-      haskell.packages.${ghcVersion}.hoogle
       nixfmt
       nodejs
       python310Packages.editorconfig
