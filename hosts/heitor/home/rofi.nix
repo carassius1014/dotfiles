@@ -9,8 +9,8 @@ in {
     font = "${gctx.fonts.ui} 14";
 
     extraConfig = {
-      run-command = "fish -c '{cmd}'";
-      run-list-command = "fish -c functions";
+      run-command = "zsh -c '{cmd}'";
+      run-list-command = "zsh -c functions";
     };
   };
 }

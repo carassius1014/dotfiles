@@ -16,7 +16,6 @@
     ./configuration/packages.nix
     ./configuration/ssh.nix
     ./configuration/system.nix
-    ./configuration/terminal.nix
     ./configuration/users.nix
     ./configuration/video.nix
     ./configuration/wayland.nix

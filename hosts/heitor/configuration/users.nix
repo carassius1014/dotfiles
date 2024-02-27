@@ -6,6 +6,6 @@ in {
   users.users.${gctx.me.name} = {
     isNormalUser = true;
     extraGroups = [ "audio" "docker" "wheel" "sound" ];
-    shell = "/run/current-system/sw/bin/fish";
+    shell = "${pkgs.zsh}/bin/zsh";
   };
 }
