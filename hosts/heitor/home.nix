@@ -11,6 +11,7 @@ in {
     ../common/home/programs/direnv.nix
     ../common/home/programs/gh.nix
     ../common/home/programs/git.nix
+    ../common/home/programs/zsh.nix
 
     ./home/fcitx5.nix
     ./home/firefox.nix
@@ -20,7 +21,6 @@ in {
     ./home/rofi.nix
     ./home/sway.nix
     ./home/waybar
-    ./home/zsh.nix
   ];
 
   home = {
