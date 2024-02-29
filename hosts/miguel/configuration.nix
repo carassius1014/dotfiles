@@ -16,15 +16,15 @@ in {
   services.nix-daemon.enable = true;
   nix.configureBuildUsers = true;
 
-  programs.fish.enable = true;
-  environment.shells = [ pkgs.fish ];
+  programs.zsh.enable = true;
+  environment.shells = [ pkgs.zsh ];
   users.users.${gctx.me.name} = {
     home = "/Users/${gctx.me.name}";
-    shell = pkgs.fish;
+    shell = pkgs.zsh;
   };
   system.activationScripts.postActivation.text = ''
-    # Set the default shell as fish for the user. MacOS doesn't do this like nixOS does
-    sudo chsh -s ${lib.getBin pkgs.fish}/bin/fish ${gctx.me.name}
+    # Set the default shell as zsh for the user. MacOS doesn't do this like nixOS does
+    sudo chsh -s ${lib.getBin pkgs.zsh}/bin/zsh ${gctx.me.name}
   '';
 
   fonts.fontDir.enable = true;
