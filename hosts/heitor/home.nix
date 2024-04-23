@@ -9,7 +9,6 @@ in {
     ../common/home/emacs.nix
     ../common/home/programs
     ../common/home/programs/direnv.nix
-    ../common/home/programs/gh.nix
     ../common/home/programs/git.nix
     ../common/home/programs/zsh.nix
 
