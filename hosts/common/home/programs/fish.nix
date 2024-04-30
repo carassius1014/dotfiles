@@ -36,26 +36,6 @@
         body = "emacs -nw $argv";
       };
 
-      browser_default = {
-        description = "Start Browser using the default profile";
-        body = "firefox-developer-edition -P dev-edition-default";
-      };
-
-      browser_work = {
-        description = "Start Browser using the work profile";
-        body = "firefox-developer-edition -P work";
-      };
-
-      browser_home = {
-        description = "Start Browser using the home profile";
-        body = "firefox-developer-edition -P home";
-      };
-
-      browser_private = {
-        description = "Start Browser using the private profile";
-        body = "firefox-developer-edition -P private";
-      };
-
       fish_prompt = {
         description = "Write out the prompt";
         body = ''

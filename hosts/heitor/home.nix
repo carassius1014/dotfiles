@@ -13,7 +13,7 @@ in {
     ../common/home/programs/zsh.nix
 
     ./home/fcitx5.nix
-    ./home/firefox.nix
+    ./home/google-chrome.nix
     ./home/kitty.nix
     ./home/mako.nix
     ./home/packages.nix
