@@ -10,7 +10,7 @@ in {
       size = 14;
     };
 
-    settings = let palette = ctx.themes.rouen-catheral.colors;
+    settings = let palette = ctx.themes.rouen-catheral.palette;
     in {
       background = "#${palette.base00}";
       foreground = "#${palette.base05}";
