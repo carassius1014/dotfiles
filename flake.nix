@@ -45,7 +45,7 @@
       GTPC22013 = import ./hosts/miguel (inputs // { inherit pkgs system; });
     };
 
-    devShell = (codex.eachSystem (system:
+    devShell = (codex.lib.eachSystem (system:
       let pkgs = nixpkgs.legacyPackages.${system};
       in {
         shell = pkgs.mkShell { buildInputs = with pkgs; [ nixfmt ]; };
