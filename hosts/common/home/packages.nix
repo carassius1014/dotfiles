@@ -2,7 +2,7 @@
 
 {
   haskellPackages = with pkgs;
-    let ghcVersion = "ghc947";
+    let ghcVersion = "ghc96";
     in [
       ghcid
       haskellPackages.fourmolu
