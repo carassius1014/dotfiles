@@ -5,6 +5,9 @@ in {
   wayland.windowManager.sway = {
     enable = true;
 
+    # https://www.reddit.com/r/NixOS/comments/1c9n1qk/comment/l0n4u6y
+    checkConfig = false;
+
     config = let
       # basic keys
       modifier = "Mod1";
