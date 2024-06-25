@@ -10,4 +10,9 @@
       fcitx5-mozc
     ];
   };
+
+  home.sessionVariables = {
+    MOZ_ENABLE_WAYLAND = 1;
+    XDG_SESSION_TYPE = "wayland";
+  };
 }
