@@ -8,6 +8,9 @@ let
 in {
   programs.firefox = {
     enable = true;
+
+    policies = { DefaultDownloadDirectory = "\${home}/Downloads"; };
+
     profiles = {
       default = {
         id = 0;
