@@ -5,6 +5,8 @@ let
   inherit (pkgs) gctx;
 in {
   nix = {
+    package = pkgs.nixVersions.git;
+
     settings = {
       substituters = [
         "https://cache.iog.io"
