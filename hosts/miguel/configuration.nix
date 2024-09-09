@@ -27,8 +27,7 @@ in {
     sudo chsh -s ${lib.getBin pkgs.zsh}/bin/zsh ${gctx.me.name}
   '';
 
-  fonts.fontDir.enable = true;
-  fonts.fonts = with pkgs; [ nerdfonts sarasa-gothic ];
+  fonts.packages = with pkgs; [ nerdfonts sarasa-gothic ];
 
   # Keyboard
   system.keyboard.enableKeyMapping = true;
