@@ -13,6 +13,7 @@
     graphviz
     fd
     fzf
+    gnome.adwaita-icon-theme
     httpie
     libnotify
     ngrok
