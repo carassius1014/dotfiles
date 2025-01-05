@@ -6,6 +6,7 @@
       (import ../../common/home/packages.nix { inherit pkgs; }).haskellPackages;
   in with pkgs;
   [
+    adwaita-icon-theme
     black
     cabal-install
     dig
@@ -13,7 +14,6 @@
     graphviz
     fd
     fzf
-    gnome.adwaita-icon-theme
     httpie
     libnotify
     ngrok

@@ -9,11 +9,11 @@ in nixpkgs.lib.nixosSystem {
   modules = [
     ./configuration.nix
 
-    nur.nixosModules.nur
+    nur.modules.nixos.default
 
     home-manager.nixosModules.home-manager
     {
-      nixpkgs.overlays = [ ctx-overlay nur.overlay ];
+      nixpkgs.overlays = [ ctx-overlay nur.overlays.default ];
       home-manager.useGlobalPkgs = true;
       home-manager.useUserPackages = true;
       home-manager.users.${gctx.me.name} = import ./home.nix {

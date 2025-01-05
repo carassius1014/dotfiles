@@ -3,11 +3,10 @@
 {
   boot.initrd.kernelModules = [ "amdgpu" ];
 
-  hardware.opengl = {
+  hardware.graphics = {
     enable = true;
-    driSupport = true;
-    driSupport32Bit = true;
-    extraPackages = with pkgs; [ amdvlk rocm-opencl-icd rocm-opencl-runtime ];
+    enable32Bit = true;
+    extraPackages = with pkgs; [ amdvlk ];
     extraPackages32 = with pkgs; [ driversi686Linux.amdvlk ];
   };
 

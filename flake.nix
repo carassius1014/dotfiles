@@ -2,10 +2,10 @@
   description = "dotfiles";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-24.05";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-24.11";
 
     home-manager = {
-      url = "github:nix-community/home-manager/release-24.05";
+      url = "github:nix-community/home-manager/release-24.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -18,7 +18,7 @@
 
     nur.url = "github:nix-community/NUR";
 
-    codex.url = "github:herp-inc/codex";
+    codex.url = "github:herp-inc-hq/codex";
 
     nix-colors.url = "github:misterio77/nix-colors";
   };
