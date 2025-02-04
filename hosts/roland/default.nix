@@ -1,7 +1,15 @@
-{ nixpkgs, pkgs, system, home-manager, ... }:
+{
+  nixpkgs,
+  pkgs,
+  system,
+  home-manager,
+  ...
+}:
 
-let inherit (pkgs) gctx;
-in nixpkgs.lib.nixosSystem {
+let
+  inherit (pkgs) gctx;
+in
+nixpkgs.lib.nixosSystem {
   inherit system;
   modules = [
     ./configuration.nix

@@ -1,7 +1,9 @@
 { pkgs, ... }:
 
-let inherit (pkgs) ctx gctx;
-in {
+let
+  inherit (pkgs) ctx gctx;
+in
+{
   programs.rofi = {
     enable = true;
     package = pkgs.rofi-wayland;

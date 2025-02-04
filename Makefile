@@ -13,7 +13,7 @@ heitor.rebuild.force:
 	@make host=heitor nixos.rebuild.force
 
 miguel.rebuild:
-	sudo darwin-rebuild switch --flake .
+	darwin-rebuild switch --flake .
 	rm -f ./result
 
 roland.rebuild:

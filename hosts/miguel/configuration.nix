@@ -1,12 +1,23 @@
-{ config, pkgs, lib, ... }:
+{
+  config,
+  pkgs,
+  lib,
+  ...
+}:
 
-let inherit (pkgs) gctx;
-in {
+let
+  inherit (pkgs) gctx;
+in
+{
   imports = [ ../common/configuration/nix.nix ];
 
   # List packages installed in system profile. To search by name, run:
   # $ nix-env -qaP | grep wget
-  environment.systemPackages = with pkgs; [ coreutils-prefixed fd fontconfig ];
+  environment.systemPackages = with pkgs; [
+    coreutils-prefixed
+    fd
+    fontconfig
+  ];
 
   # Use a custom configuration.nix location.
   # $ darwin-rebuild switch -I darwin-config=$HOME/.config/nixpkgs/darwin/configuration.nix
@@ -27,7 +38,10 @@ in {
     sudo chsh -s ${lib.getBin pkgs.zsh}/bin/zsh ${gctx.me.name}
   '';
 
-  fonts.packages = with pkgs; [ nerdfonts sarasa-gothic ];
+  fonts.packages = with pkgs; [
+    nerdfonts
+    sarasa-gothic
+  ];
 
   # Keyboard
   system.keyboard.enableKeyMapping = true;

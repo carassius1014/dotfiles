@@ -16,4 +16,3 @@
     fontconfig.enable = true;
   };
 }
-

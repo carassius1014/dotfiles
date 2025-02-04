@@ -7,15 +7,14 @@ let
     systemd-run --user --scope --collect --quiet --unit=sway \
       systemd-cat --identifier=sway ${pkgs.sway}/bin/sway $@
   '';
-in {
+in
+{
   services.greetd = {
     enable = true;
     restart = false;
     settings = {
       default_session = {
-        command = "${
-            lib.makeBinPath [ pkgs.greetd.tuigreet ]
-          }/tuigreet --remember --time --cmd ${swayRun}";
+        command = "${lib.makeBinPath [ pkgs.greetd.tuigreet ]}/tuigreet --remember --time --cmd ${swayRun}";
         user = "greeter";
       };
       initial_session = {

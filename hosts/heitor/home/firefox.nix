@@ -5,11 +5,14 @@ let
     onepassword-password-manager
     ublock-origin
   ];
-in {
+in
+{
   programs.firefox = {
     enable = true;
 
-    policies = { DefaultDownloadDirectory = "\${home}/Downloads"; };
+    policies = {
+      DefaultDownloadDirectory = "\${home}/Downloads";
+    };
 
     profiles = {
       default = {

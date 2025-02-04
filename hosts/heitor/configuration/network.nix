@@ -24,9 +24,11 @@
       }
     ];
 
-    allowedUDPPortRanges = [{
-      from = 27005;
-      to = 27030;
-    }];
+    allowedUDPPortRanges = [
+      {
+        from = 27005;
+        to = 27030;
+      }
+    ];
   };
 }

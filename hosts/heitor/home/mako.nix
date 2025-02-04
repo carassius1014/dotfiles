@@ -1,7 +1,9 @@
 { pkgs, ... }:
 
-let inherit (pkgs) ctx gctx;
-in {
+let
+  inherit (pkgs) ctx gctx;
+in
+{
   services.mako = {
     enable = true;
     font = "${gctx.fonts.ui} 14";

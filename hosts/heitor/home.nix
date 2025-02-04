@@ -1,7 +1,9 @@
 { pkgs, codexHmModule }:
 
-let inherit (pkgs) gctx;
-in {
+let
+  inherit (pkgs) gctx;
+in
+{
   imports = [
     codexHmModule
 

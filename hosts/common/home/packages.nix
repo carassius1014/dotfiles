@@ -1,9 +1,12 @@
 { pkgs }:
 
 {
-  haskellPackages = with pkgs;
-    let ghcVersion = "ghc96";
-    in [
+  haskellPackages =
+    with pkgs;
+    let
+      ghcVersion = "ghc96";
+    in
+    [
       ghcid
       haskellPackages.fourmolu
       haskellPackages.hoogle

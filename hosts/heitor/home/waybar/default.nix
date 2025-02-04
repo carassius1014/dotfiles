@@ -1,7 +1,9 @@
 { pkgs, ... }:
 
-let inherit (pkgs) ctx;
-in {
+let
+  inherit (pkgs) ctx;
+in
+{
   programs.waybar = {
     enable = true;
 
@@ -14,13 +16,27 @@ in {
 
         output = [ ctx.monitors.dell-U2720QM ];
 
-        modules-left = [ "sway/workspaces" "sway/mode" "wlr/taskbar" ];
+        modules-left = [
+          "sway/workspaces"
+          "sway/mode"
+          "wlr/taskbar"
+        ];
         modules-center = [ "sway/window" ];
-        modules-right = [ "tray" "cpu" "temperature" "memory" "clock" ];
+        modules-right = [
+          "tray"
+          "cpu"
+          "temperature"
+          "memory"
+          "clock"
+        ];
 
-        "sway/mode" = { format = ''<span style="italic">{}</span>''; };
+        "sway/mode" = {
+          format = ''<span style="italic">{}</span>'';
+        };
 
-        "tray" = { spacing = 10; };
+        "tray" = {
+          spacing = 10;
+        };
 
         "cpu" = {
           format = "CPU {usage}%";
@@ -30,10 +46,16 @@ in {
         "temperature" = {
           critical-threshold = 80;
           format = "{temperatureC}°C {icon}";
-          format-icons = [ "" "" "" ];
+          format-icons = [
+            ""
+            ""
+            ""
+          ];
         };
 
-        "memory" = { format = "{}% "; };
+        "memory" = {
+          format = "{}% ";
+        };
 
         "clock" = {
           tooltip-format = ''

@@ -1,7 +1,9 @@
 { pkgs, ... }:
 
-let inherit (pkgs) gctx;
-in {
+let
+  inherit (pkgs) gctx;
+in
+{
   security.acme = {
     acceptTerms = true;
     defaults.email = gctx.me.email;

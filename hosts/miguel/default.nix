@@ -1,7 +1,16 @@
-{ pkgs, system, darwin, home-manager, codex, ... }:
+{
+  pkgs,
+  system,
+  darwin,
+  home-manager,
+  codex,
+  ...
+}:
 
-let inherit (pkgs) gctx;
-in darwin.lib.darwinSystem {
+let
+  inherit (pkgs) gctx;
+in
+darwin.lib.darwinSystem {
   inherit system;
   modules = [
     ./configuration.nix

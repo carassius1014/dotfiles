@@ -4,15 +4,17 @@
   programs.fish = {
     enable = true;
 
-    plugins = [{
-      name = "foreign-env";
-      src = pkgs.fetchFromGitHub {
-        owner = "oh-my-fish";
-        repo = "plugin-foreign-env";
-        rev = "b3dd471bcc885b597c3922e4de836e06415e52dd";
-        sha256 = "13wdsvpazivlxk921ccqbk7gl6ya2md8f45rckbn8rn119ckf7fy";
-      };
-    }];
+    plugins = [
+      {
+        name = "foreign-env";
+        src = pkgs.fetchFromGitHub {
+          owner = "oh-my-fish";
+          repo = "plugin-foreign-env";
+          rev = "b3dd471bcc885b597c3922e4de836e06415e52dd";
+          sha256 = "13wdsvpazivlxk921ccqbk7gl6ya2md8f45rckbn8rn119ckf7fy";
+        };
+      }
+    ];
 
     shellInit = ''
       # nix
