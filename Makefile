@@ -23,4 +23,4 @@ roland.rebuild.force:
 	@make host=roland nixos.rebuild.force
 
 format:
-	git ls-files "*.nix" | xargs nixfmt
+	git ls-files "*.nix" | xargs nix fmt

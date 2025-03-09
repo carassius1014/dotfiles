@@ -63,8 +63,19 @@
             pkgs = nixpkgs.legacyPackages.${system};
           in
           {
-            shell = pkgs.mkShell { buildInputs = with pkgs; [ nixfmt-rfc-style ]; };
+            shell = pkgs.mkShell { buildInputs = [ ]; };
           }
         )).shell;
+
+      formatter =
+        (codex.lib.eachSystem (
+          system:
+          let
+            pkgs = nixpkgs.legacyPackages.${system};
+          in
+          {
+            fmt = pkgs.nixfmt-rfc-style;
+          }
+        )).fmt;
     };
 }

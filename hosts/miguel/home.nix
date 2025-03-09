@@ -15,7 +15,6 @@
   home = {
     packages = with pkgs; [
       cachix
-      nixfmt
       nodejs
       python310Packages.editorconfig
       ripgrep
