@@ -1,6 +1,7 @@
 {
   nixpkgs,
   pkgs,
+  pkgs-unstable,
   system,
   home-manager,
   nur,
@@ -27,10 +28,11 @@ nixpkgs.lib.nixosSystem {
         ctx-overlay
         nur.overlays.default
       ];
+      home-manager.extraSpecialArgs = { inherit pkgs-unstable; };
       home-manager.useGlobalPkgs = true;
       home-manager.useUserPackages = true;
       home-manager.users.${gctx.me.name} = import ./home.nix {
-        inherit pkgs;
+        inherit pkgs pkgs-unstable;
         codexHmModule = codex.hmModule.${system};
       };
     }

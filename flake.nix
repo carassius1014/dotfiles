@@ -4,6 +4,8 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-24.11";
 
+    nixpkgs-unstable.url = "github:nixos/nixpkgs/nixpkgs-unstable";
+
     home-manager = {
       url = "github:nix-community/home-manager/release-24.11";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -23,59 +25,55 @@
     nix-colors.url = "github:misterio77/nix-colors";
   };
 
-  outputs =
-    {
-      self,
-      nixpkgs,
-      codex,
-      ...
-    }@inputs:
-    {
-      nixosConfigurations =
+  outputs = inputs: {
+    nixosConfigurations =
+      let
+        system = "x86_64-linux";
+        pkgs = import inputs.nixpkgs {
+          inherit system;
+          overlays = [ (import ./hosts/common/overlays/context.nix) ];
+        };
+        pkgs-unstable = import inputs.nixpkgs-unstable {
+          inherit system;
+        };
+      in
+      {
+        heitor = import ./hosts/heitor (inputs // { inherit pkgs pkgs-unstable system; });
+        roland = import ./hosts/roland (inputs // { inherit pkgs system; });
+      };
+
+    darwinConfigurations =
+      let
+        system = "aarch64-darwin";
+        pkgs = import inputs.nixpkgs {
+          inherit system;
+          overlays = [ (import ./hosts/common/overlays/context.nix) ];
+        };
+      in
+      {
+        GTPC22013 = import ./hosts/miguel (inputs // { inherit pkgs system; });
+      };
+
+    devShell =
+      (inputs.codex.lib.eachSystem (
+        system:
         let
-          system = "x86_64-linux";
-          pkgs = import nixpkgs {
-            inherit system;
-            overlays = [ (import ./hosts/common/overlays/context.nix) ];
-          };
+          pkgs = inputs.nixpkgs.legacyPackages.${system};
         in
         {
-          heitor = import ./hosts/heitor (inputs // { inherit pkgs system; });
-          roland = import ./hosts/roland (inputs // { inherit pkgs system; });
-        };
+          shell = pkgs.mkShell { buildInputs = [ ]; };
+        }
+      )).shell;
 
-      darwinConfigurations =
+    formatter =
+      (inputs.codex.lib.eachSystem (
+        system:
         let
-          system = "aarch64-darwin";
-          pkgs = import nixpkgs {
-            inherit system;
-            overlays = [ (import ./hosts/common/overlays/context.nix) ];
-          };
+          pkgs = inputs.nixpkgs.legacyPackages.${system};
         in
         {
-          GTPC22013 = import ./hosts/miguel (inputs // { inherit pkgs system; });
-        };
-
-      devShell =
-        (codex.lib.eachSystem (
-          system:
-          let
-            pkgs = nixpkgs.legacyPackages.${system};
-          in
-          {
-            shell = pkgs.mkShell { buildInputs = [ ]; };
-          }
-        )).shell;
-
-      formatter =
-        (codex.lib.eachSystem (
-          system:
-          let
-            pkgs = nixpkgs.legacyPackages.${system};
-          in
-          {
-            fmt = pkgs.nixfmt-rfc-style;
-          }
-        )).fmt;
-    };
+          fmt = pkgs.nixfmt-rfc-style;
+        }
+      )).fmt;
+  };
 }

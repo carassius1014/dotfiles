@@ -1,4 +1,8 @@
-{ pkgs, codexHmModule }:
+{
+  pkgs,
+  pkgs-unstable,
+  codexHmModule,
+}:
 
 let
   inherit (pkgs) gctx;

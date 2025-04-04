@@ -1,9 +1,10 @@
-{ pkgs, ... }:
+{ pkgs, pkgs-unstable, ... }:
 
 {
   home.packages =
     let
       haskellPackages = (import ../../common/home/packages.nix { inherit pkgs; }).haskellPackages;
+      unstablePackages = with pkgs-unstable; [ code-cursor ];
     in
     with pkgs;
     [
@@ -37,5 +38,6 @@
       xdg-utils
       yarn
     ]
-    ++ haskellPackages;
+    ++ haskellPackages
+    ++ unstablePackages;
 }
