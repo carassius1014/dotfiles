@@ -22,5 +22,10 @@ roland.rebuild:
 roland.rebuild.force:
 	@make host=roland nixos.rebuild.force
 
+doom.reinstall:
+	rm -rf emacs.d
+	git clone --depth 1 https://github.com/doomemacs/doomemacs emacs.d
+	doom install
+
 format:
 	git ls-files "*.nix" | xargs nix fmt

@@ -15,11 +15,9 @@
   home = {
     packages = with pkgs; [
       cachix
-      nodejs
       python310Packages.editorconfig
       ripgrep
       tree
-      yarn
       zstd
     ];
 
