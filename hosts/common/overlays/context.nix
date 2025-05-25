@@ -5,6 +5,7 @@ self: super: {
       name = "carassius1014";
       realName = "Jiyu Zhou";
       email = "${name}@gmail.com";
+      companyEmail = "jiyu.zhou@herp.co.jp";
     };
 
     fonts = {
