@@ -13,6 +13,7 @@
       cabal-install
       dig
       direnv
+      gnupg
       graphviz
       fd
       fzf

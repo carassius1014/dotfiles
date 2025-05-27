@@ -15,7 +15,8 @@ in
     ../common/home/emacs.nix
     ../common/home/programs
     ../common/home/programs/direnv.nix
-    ../common/home/programs/git.nix
+    ../common/home/programs/git
+    ../common/home/programs/git/company.nix
     ../common/home/programs/zsh.nix
 
     ./home/fcitx5.nix
