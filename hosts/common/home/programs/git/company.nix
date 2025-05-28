@@ -5,7 +5,7 @@ let
   contents = {
     user.name = gctx.me.realName;
     user.email = gctx.me.companyEmail;
-    commit.gpgsign = true;
+    commit.gpgsign = false;
   };
 in
 {
