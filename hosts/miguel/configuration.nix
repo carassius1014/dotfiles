@@ -7,6 +7,7 @@
 
 let
   inherit (pkgs) gctx;
+  nerd-fonts-pkgs = builtins.filter lib.attrsets.isDerivation (builtins.attrValues pkgs.nerd-fonts);
 in
 {
   imports = [ ../common/configuration/nix.nix ];
@@ -19,14 +20,6 @@ in
     fontconfig
   ];
 
-  # Use a custom configuration.nix location.
-  # $ darwin-rebuild switch -I darwin-config=$HOME/.config/nixpkgs/darwin/configuration.nix
-  # environment.darwinConfig = "$HOME/.config/nixpkgs/darwin/configuration.nix";
-
-  # Auto upgrade nix package and the daemon service.
-  services.nix-daemon.enable = true;
-  nix.configureBuildUsers = true;
-
   programs.zsh.enable = true;
   environment.shells = [ pkgs.zsh ];
   users.users.${gctx.me.name} = {
@@ -38,10 +31,12 @@ in
     sudo chsh -s ${lib.getBin pkgs.zsh}/bin/zsh ${gctx.me.name}
   '';
 
-  fonts.packages = with pkgs; [
-    nerdfonts
-    sarasa-gothic
-  ];
+  fonts.packages =
+    with pkgs;
+    nerd-fonts-pkgs
+    ++ [
+      sarasa-gothic
+    ];
 
   # Keyboard
   system.keyboard.enableKeyMapping = true;
