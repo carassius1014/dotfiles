@@ -22,7 +22,6 @@
       ngrok
       nix-prefetch-git
       nodejs
-      okular
       p7zip
       python310
       python310Packages.editorconfig

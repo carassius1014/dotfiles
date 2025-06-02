@@ -1,7 +1,7 @@
 { pkgs, ... }:
 
 let
-  extensions = with pkgs.nur.repos.rycee.firefox-addons; [
+  packages = with pkgs.nur.repos.rycee.firefox-addons; [
     onepassword-password-manager
     ublock-origin
   ];
@@ -18,25 +18,25 @@ in
       default = {
         id = 0;
         name = "default";
-        inherit extensions;
+        extensions = { inherit packages; };
       };
 
       work = {
         id = 1;
         name = "work";
-        inherit extensions;
+        extensions = { inherit packages; };
       };
 
       home = {
         id = 2;
         name = "home";
-        inherit extensions;
+        extensions = { inherit packages; };
       };
 
       private = {
         id = 3;
         name = "private";
-        inherit extensions;
+        extensions = { inherit packages; };
       };
     };
   };
