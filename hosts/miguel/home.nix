@@ -16,6 +16,7 @@
   home = {
     packages = with pkgs; [
       cachix
+      poetry
       python310Packages.editorconfig
       ripgrep
       tree
