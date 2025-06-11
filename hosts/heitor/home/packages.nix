@@ -23,6 +23,7 @@
       nix-prefetch-git
       nodejs
       p7zip
+      poetry
       python310
       python310Packages.editorconfig
       ripgrep
