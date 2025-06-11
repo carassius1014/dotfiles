@@ -54,7 +54,7 @@
        dhall
        emacs-lisp
        haskell
-       javascript
+       (javascript +lsp)
        json
        latex
        markdown
