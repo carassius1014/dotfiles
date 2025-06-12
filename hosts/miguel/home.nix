@@ -15,9 +15,11 @@
 
   home = {
     packages = with pkgs; [
+      bun
       cachix
       poetry
       python310Packages.editorconfig
+      nodejs-slim
       ripgrep
       tree
       typescript-language-server
