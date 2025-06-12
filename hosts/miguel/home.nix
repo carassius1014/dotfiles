@@ -20,6 +20,7 @@
       python310Packages.editorconfig
       ripgrep
       tree
+      typescript-language-server
       zstd
     ];
 
