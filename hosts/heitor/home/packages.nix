@@ -3,42 +3,15 @@
 {
   home.packages =
     let
-      haskellPackages = (import ../../common/home/packages.nix { inherit pkgs; }).haskellPackages;
-      unstablePackages = with pkgs-unstable; [ code-cursor ];
+      commonPackages = import ../../common/home/packages.nix { inherit pkgs pkgs-unstable; };
     in
     with pkgs;
     [
       adwaita-icon-theme
-      black
-      cabal-install
-      dig
-      direnv
-      gnupg
-      graphviz
-      fd
-      fzf
-      httpie
       libnotify
-      ngrok
-      nix-prefetch-git
-      nodejs
-      p7zip
-      poetry
-      python310
-      python310Packages.editorconfig
-      ripgrep
-      rlwrap
-      saml2aws
-      shellcheck
       steam
       symbola
-      tree
-      unrar
-      unzip
-      whois
       xdg-utils
-      yarn
     ]
-    ++ haskellPackages
-    ++ unstablePackages;
+    ++ commonPackages;
 }
