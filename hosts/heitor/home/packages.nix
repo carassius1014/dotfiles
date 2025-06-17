@@ -1,9 +1,9 @@
-{ pkgs, pkgs-unstable, ... }:
+{ pkgs, ... }:
 
 {
   home.packages =
     let
-      commonPackages = import ../../common/home/packages.nix { inherit pkgs pkgs-unstable; };
+      commonPackages = import ../../common/home/packages.nix { inherit pkgs; };
     in
     with pkgs;
     [

@@ -1,4 +1,8 @@
-{ pkgs, codexHmModule, ... }:
+{
+  pkgs,
+  codexHmModule,
+  ...
+}:
 
 {
   imports = [
@@ -13,19 +17,13 @@
     ../common/home/programs/zsh.nix
   ];
 
-  home = {
-    packages = with pkgs; [
-      bun
-      cachix
-      poetry
-      python310Packages.editorconfig
-      nodejs-slim
-      ripgrep
-      tree
-      typescript-language-server
-      zstd
-    ];
+  home =
+    let
+      commonPackages = import ../common/home/packages.nix { inherit pkgs; };
+    in
+    {
+      packages = commonPackages;
 
-    stateVersion = "22.05";
-  };
+      stateVersion = "22.05";
+    };
 }

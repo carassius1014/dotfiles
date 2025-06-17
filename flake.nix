@@ -4,8 +4,6 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-25.05";
 
-    nixpkgs-unstable.url = "github:nixos/nixpkgs/nixpkgs-unstable";
-
     home-manager = {
       url = "github:nix-community/home-manager/release-25.05";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -31,14 +29,12 @@
         system = "x86_64-linux";
         pkgs = import inputs.nixpkgs {
           inherit system;
+          config.allowUnfree = true;
           overlays = [ (import ./hosts/common/overlays/context.nix) ];
-        };
-        pkgs-unstable = import inputs.nixpkgs-unstable {
-          inherit system;
         };
       in
       {
-        heitor = import ./hosts/heitor (inputs // { inherit pkgs pkgs-unstable system; });
+        heitor = import ./hosts/heitor (inputs // { inherit pkgs system; });
         roland = import ./hosts/roland (inputs // { inherit pkgs system; });
       };
 
@@ -47,6 +43,7 @@
         system = "aarch64-darwin";
         pkgs = import inputs.nixpkgs {
           inherit system;
+          config.allowUnfree = true;
           overlays = [ (import ./hosts/common/overlays/context.nix) ];
         };
       in
