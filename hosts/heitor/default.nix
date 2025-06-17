@@ -30,7 +30,7 @@ nixpkgs.lib.nixosSystem {
       home-manager.useGlobalPkgs = true;
       home-manager.useUserPackages = true;
       home-manager.users.${gctx.me.name} = import ./home.nix {
-        inherit pkgs pkgs-unstable;
+        inherit pkgs;
         codexHmModule = codex.hmModule.${system};
       };
     }
