@@ -23,6 +23,7 @@ with pkgs;
   rlwrap
   saml2aws
   shellcheck
+  socat
   tree
   typescript-language-server
   unrar
