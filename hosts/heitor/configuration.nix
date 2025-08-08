@@ -12,6 +12,7 @@
     ./configuration/docker.nix
     ./configuration/fonts.nix
     ./configuration/i18n.nix
+    ./configuration/ld.nix
     ./configuration/network.nix
     ./configuration/packages.nix
     ./configuration/ssh.nix

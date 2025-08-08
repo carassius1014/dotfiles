@@ -11,6 +11,7 @@
         paths = [
           "$HOME/.bun/bin"
           "$HOME/.dotfiles/emacs.d/bin"
+          "$HOME/.local/bin"
         ];
       in
       ''
@@ -23,10 +24,6 @@
         PROMPT=$'%n@%m %F{green}%~%f %F{blue}''${vcs_info_msg_0_}%f\nλ '
 
         export PATH=$PATH:${lib.concatStringsSep ":" paths}
-
-        export ANTHROPIC_MODEL='us.anthropic.claude-3-7-sonnet-20250219-v1:0'
-        export ANTHROPIC_SMALL_FAST_MODEL='us.anthropic.claude-3-5-haiku-20241022-v1:0'
-        export CLAUDE_CODE_USE_BEDROCK=1
       '';
   };
 }

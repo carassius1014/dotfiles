@@ -26,18 +26,17 @@ in
       trusted-users = [ "@admin" ];
     };
 
-    extraOptions =
-      ''
-        auto-optimise-store = true
-        experimental-features = nix-command flakes
-      ''
-      + lib.optionalString (pkgs.system == "aarch64-darwin") ''
-        extra-platforms = aarch64-darwin
-        netrc-file = /Users/${gctx.me.name}/.netrc
-      ''
-      + lib.optionalString (pkgs.system == "x86_64-linux") ''
-        netrc-file = /home/${gctx.me.name}/.netrc
-      '';
+    extraOptions = ''
+      auto-optimise-store = true
+      experimental-features = nix-command flakes
+    ''
+    + lib.optionalString (pkgs.system == "aarch64-darwin") ''
+      extra-platforms = aarch64-darwin
+      netrc-file = /Users/${gctx.me.name}/.netrc
+    ''
+    + lib.optionalString (pkgs.system == "x86_64-linux") ''
+      netrc-file = /home/${gctx.me.name}/.netrc
+    '';
   };
 
   nixpkgs = {
