@@ -7,7 +7,6 @@ with pkgs;
   code-cursor
   editorconfig-core-c
   dig
-  direnv
   gnupg
   graphviz
   fd
