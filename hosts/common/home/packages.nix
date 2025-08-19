@@ -28,4 +28,5 @@ with pkgs;
   unrar
   unzip
   whois
+  yq-go
 ]
