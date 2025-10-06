@@ -18,7 +18,7 @@
 
     nur.url = "github:nix-community/NUR";
 
-    codex.url = "github:herp-inc-hq/codex";
+    codex.url = "github:herp-inc-hq/codex/master";
 
     nix-colors.url = "github:misterio77/nix-colors";
   };
