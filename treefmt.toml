@@ -1,0 +1,42 @@
+# treefmt configuration for NixOS dotfiles
+# https://github.com/numtide/treefmt
+
+# Exclude common directories and files that shouldn't be formatted
+excludes = [
+  # Version control
+  ".git/**",
+
+  # Build artifacts and caches
+  "emacs.d/**",
+
+  # Profile images and binary files
+  "profile/**",
+  "wallpapers/**",
+
+  # Lock files
+  "*.lock",
+
+  # Other dotfiles
+  ".direnv/**",
+  ".env.local",
+]
+
+[formatter.elisp]
+command = "emacs"
+options = ["elisp-autofmt-buffer", "--batch"]
+includes = ["*.el"]
+
+[formatter.nix]
+command = "nix"
+options = ["fmt"]
+includes = ["*.nix"]
+
+[formatter.shell]
+command = "shfmt"
+options = ["-i", "2", "-s", "-w"]
+includes = ["*.sh"]
+
+[formatter.toml]
+command = "taplo"
+options = ["format"]
+includes = ["*.toml"]

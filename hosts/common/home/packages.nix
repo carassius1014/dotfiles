@@ -22,8 +22,11 @@ with pkgs;
   rlwrap
   saml2aws
   shellcheck
+  shfmt
   socat
+  taplo
   tree
+  treefmt
   typescript-language-server
   unrar
   unzip
