@@ -6,6 +6,7 @@
 (load! "config/indents")
 (load! "config/keybinds")
 (load! "config/lsp")
+(load! "config/magit")
 (load! "config/projectile")
 (load! "config/smartparens")
 (load! "config/themes")
