@@ -21,6 +21,8 @@
     codex.url = "github:herp-inc-hq/codex/master";
 
     nix-colors.url = "github:misterio77/nix-colors";
+
+    prisma-utils.url = "github:VanCoding/nix-prisma-utils";
   };
 
   outputs = inputs: {

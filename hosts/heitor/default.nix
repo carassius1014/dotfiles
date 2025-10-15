@@ -1,11 +1,12 @@
 {
-  nixpkgs,
-  pkgs,
-  system,
-  home-manager,
-  nur,
-  nix-colors,
   codex,
+  home-manager,
+  nix-colors,
+  nixpkgs,
+  nur,
+  pkgs,
+  prisma-utils,
+  system,
   ...
 }:
 
@@ -31,6 +32,7 @@ nixpkgs.lib.nixosSystem {
       home-manager.useUserPackages = true;
       home-manager.users.${gctx.me.name} = import ./home.nix {
         inherit pkgs;
+        inherit (prisma-utils.lib) prisma-factory;
         codexHmModule = codex.hmModule.${system};
       };
     }

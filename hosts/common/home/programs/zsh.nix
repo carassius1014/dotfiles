@@ -1,4 +1,7 @@
-{ lib, pkgs, ... }:
+{
+  pkgs,
+  shellHook ? "",
+}:
 
 {
   programs.zsh = {
@@ -23,7 +26,9 @@
         setopt PROMPT_SUBST
         PROMPT=$'%n@%m %F{green}%~%f %F{blue}''${vcs_info_msg_0_}%f\nλ '
 
-        export PATH=$PATH:${lib.concatStringsSep ":" paths}
+        export PATH=$PATH:${pkgs.lib.concatStringsSep ":" paths}
+
+        ${shellHook}
       '';
   };
 }

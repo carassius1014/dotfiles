@@ -1,10 +1,12 @@
 {
-  pkgs,
   codexHmModule,
+  pkgs,
+  prisma-factory,
 }:
 
 let
   inherit (pkgs) gctx;
+  prisma = import ./packages/prisma.nix { inherit pkgs prisma-factory; };
 in
 {
   imports = [
@@ -16,7 +18,11 @@ in
     ../common/home/programs/direnv.nix
     ../common/home/programs/git
     ../common/home/programs/git/company.nix
-    ../common/home/programs/zsh.nix
+
+    (import ../common/home/programs/zsh.nix {
+      inherit pkgs;
+      inherit (prisma) shellHook;
+    })
 
     ./home/fcitx5.nix
     ./home/firefox.nix
