@@ -8,6 +8,7 @@ with pkgs;
   editorconfig-core-c
   dig
   gnupg
+  google-cloud-sdk
   graphviz
   fd
   fzf
