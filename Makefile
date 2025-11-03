@@ -6,6 +6,15 @@ nixos.rebuild:
 nixos.rebuild.force:
 	NIXPKGS_ALLOW_UNFREE=1 nixos-rebuild switch --use-remote-sudo --install-bootloader --impure --flake .#${host}
 
+heitor.bump-up:
+	nix flake update \
+		codex \
+		home-manager \
+		nixpkgs \
+		nix-colors \
+		nur \
+		prisma-utils
+
 heitor.rebuild:
 	@make host=heitor nixos.rebuild
 

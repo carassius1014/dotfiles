@@ -54,7 +54,7 @@
        dhall
        emacs-lisp
        haskell
-       (javascript +lsp)
+       (javascript +lsp +tree-sitter)
        json
        latex
        markdown
@@ -64,7 +64,6 @@
        protobuf
        purescript
        python
-       (rust +lsp)
        sh
        yaml
 
