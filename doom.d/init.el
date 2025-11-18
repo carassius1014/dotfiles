@@ -47,6 +47,7 @@
        lsp
        magit
        terraform
+       tree-sitter
 
        :lang
        (agda +local)
@@ -65,6 +66,7 @@
        purescript
        python
        sh
+       (web +tree-sitter)
        yaml
 
        :config
