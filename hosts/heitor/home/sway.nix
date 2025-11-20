@@ -101,15 +101,15 @@ in
         };
 
         output = {
-          "${ctx.monitors.dell-U2414H}" = {
+          "${ctx.monitors.eizo-EV2455}" = {
             pos = "0 0";
-            res = "1920x1080";
+            res = "1920x1200";
             transform = "270";
             bg = "~/.dotfiles/wallpapers/claude-monet-rouen-cathedral-1080x1920.jpeg fill";
           };
 
           "${ctx.monitors.dell-U2720QM}" = {
-            pos = "1080 0";
+            pos = "1200 0";
             res = "3840x2160";
             scale = "2";
             bg = "~/.dotfiles/wallpapers/claude-monet-water-lilies-4500x2122.jpeg fill";
@@ -119,11 +119,11 @@ in
         workspaceOutputAssign = [
           {
             workspace = ws1;
-            output = ctx.monitors.dell-U2414H;
+            output = ctx.monitors.eizo-EV2455;
           }
           {
             workspace = ws2;
-            output = ctx.monitors.dell-U2414H;
+            output = ctx.monitors.eizo-EV2455;
           }
           {
             workspace = ws3;
