@@ -14,7 +14,7 @@
     ../common/home/programs/gh.nix
     ../common/home/programs/git
     ../common/home/programs/git/company.nix
-    ../common/home/programs/zsh.nix
+    (import ../common/home/programs/zsh.nix { inherit pkgs; })
   ];
 
   home =
