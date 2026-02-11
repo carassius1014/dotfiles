@@ -4,6 +4,7 @@ with pkgs;
 [
   bun
   black
+  cachix
   code-cursor
   editorconfig-core-c
   dig
