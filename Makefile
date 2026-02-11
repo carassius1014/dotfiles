@@ -38,3 +38,4 @@ doom.reinstall:
 
 format:
 	git ls-files "*.nix" | xargs nix fmt
+	git ls-files "*.el" | xargs ./bin/format-elisp.sh

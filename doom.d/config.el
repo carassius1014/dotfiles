@@ -1,5 +1,6 @@
 ;;; $DOOMDIR/config.el -*- lexical-binding: t; -*-
 
+(load! "config/env")
 (load! "config/evil")
 (load! "config/flycheck")
 (load! "config/fonts")
