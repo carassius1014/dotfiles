@@ -1,12 +1,14 @@
 {
   pkgs,
   codexHmModule,
+  mac-app-util,
   ...
 }:
 
 {
   imports = [
     codexHmModule
+    mac-app-util.homeManagerModules.default
     ../common/home/codex.nix
     ../common/home/emacs.nix
     ../common/home/programs

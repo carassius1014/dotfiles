@@ -23,6 +23,8 @@
     nix-colors.url = "github:misterio77/nix-colors";
 
     prisma-utils.url = "github:VanCoding/nix-prisma-utils";
+
+    mac-app-util.url = "github:hraban/mac-app-util";
   };
 
   outputs = inputs: {
@@ -50,8 +52,20 @@
         };
       in
       {
-        GTPC22013 = import ./hosts/miguel (inputs // { inherit pkgs system; });
-        GTPC26001 = import ./hosts/miguel (inputs // { inherit pkgs system; });
+        GTPC22013 = import ./hosts/miguel (
+          inputs
+          // {
+            inherit pkgs system;
+            mac-app-util = inputs.mac-app-util;
+          }
+        );
+        GTPC26001 = import ./hosts/miguel (
+          inputs
+          // {
+            inherit pkgs system;
+            mac-app-util = inputs.mac-app-util;
+          }
+        );
       };
 
     devShell =
