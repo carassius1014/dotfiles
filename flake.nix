@@ -51,6 +51,7 @@
       in
       {
         GTPC22013 = import ./hosts/miguel (inputs // { inherit pkgs system; });
+        GTPC26001 = import ./hosts/miguel (inputs // { inherit pkgs system; });
       };
 
     devShell =
