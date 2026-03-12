@@ -6,5 +6,5 @@
 }:
 
 {
-  config.codex.enable = true;
+  config.codex.standardPackages.enable = true;
 }

@@ -25,6 +25,7 @@ nixpkgs.lib.nixosSystem {
     home-manager.nixosModules.home-manager
     {
       nixpkgs.overlays = [
+        codex.overlays.default
         ctx-overlay
         nur.overlays.default
       ];
@@ -33,7 +34,7 @@ nixpkgs.lib.nixosSystem {
       home-manager.users.${gctx.me.name} = import ./home.nix {
         inherit pkgs;
         inherit (prisma-utils.lib) prisma-factory;
-        codexHmModule = codex.hmModule.${system};
+        codexHmModule = codex.homeModules.default;
       };
     }
   ];
