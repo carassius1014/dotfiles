@@ -18,12 +18,15 @@ darwin.lib.darwinSystem {
     mac-app-util.darwinModules.default
     home-manager.darwinModules.home-manager
     {
+      nixpkgs.overlays = [
+        codex.overlays.default
+      ];
       home-manager.useGlobalPkgs = true;
       home-manager.useUserPackages = true;
       home-manager.backupFileExtension = "backup";
       home-manager.users.${gctx.me.name} = import ./home.nix {
         inherit pkgs mac-app-util;
-        codexHmModule = codex.hmModule.aarch64-darwin;
+        codexHmModule = codex.homeModules.default;
       };
     }
   ];
