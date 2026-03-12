@@ -89,7 +89,7 @@ echo "[4/7] Removing Nix Store mount from fstab..."
 if [ -f /etc/fstab ]; then
   if grep -q "/nix" /etc/fstab; then
     # Create a temporary file without the nix line
-    sudo grep -v "/nix" /etc/fstab > /tmp/fstab.tmp
+    sudo grep -v "/nix" /etc/fstab >/tmp/fstab.tmp
 
     # Use vifs to safely update fstab
     # We need to provide the edited content to vifs via stdin
@@ -125,7 +125,7 @@ if [ -f /etc/synthetic.conf ]; then
   else
     # Has other entries, remove just the nix line
     if grep -q "^nix$" /etc/synthetic.conf; then
-      sudo grep -v "^nix$" /etc/synthetic.conf > /tmp/synthetic.conf.tmp
+      sudo grep -v "^nix$" /etc/synthetic.conf >/tmp/synthetic.conf.tmp
       sudo cp /tmp/synthetic.conf.tmp /etc/synthetic.conf
       rm -f /tmp/synthetic.conf.tmp
       echo "  ✓ Removed 'nix' line from /etc/synthetic.conf"

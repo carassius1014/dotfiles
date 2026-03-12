@@ -18,7 +18,7 @@
 
     nur.url = "github:nix-community/NUR";
 
-    codex.url = "github:herp-inc-hq/codex/master";
+    codex.url = "github:herp-inc-hq/codex/release-25.05";
 
     nix-colors.url = "github:misterio77/nix-colors";
 
@@ -68,26 +68,20 @@
         );
       };
 
-    devShell =
-      (inputs.codex.lib.eachSystem (
-        system:
-        let
-          pkgs = inputs.nixpkgs.legacyPackages.${system};
-        in
+    devShells =
+      (inputs.codex.lib.eachSystem { inherit inputs; } (
+        { pkgs, ... }:
         {
-          shell = pkgs.mkShell { buildInputs = [ ]; };
+          devShells.default = pkgs.mkShell { buildInputs = [ ]; };
         }
-      )).shell;
+      )).devShells;
 
     formatter =
-      (inputs.codex.lib.eachSystem (
-        system:
-        let
-          pkgs = inputs.nixpkgs.legacyPackages.${system};
-        in
+      (inputs.codex.lib.eachSystem { inherit inputs; } (
+        { pkgs, ... }:
         {
-          fmt = pkgs.nixfmt-rfc-style;
+          formatter = pkgs.nixfmt-rfc-style;
         }
-      )).fmt;
+      )).formatter;
   };
 }
