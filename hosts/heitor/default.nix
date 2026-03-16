@@ -1,4 +1,5 @@
 {
+  claude-code,
   codex,
   home-manager,
   nix-colors,
@@ -25,6 +26,7 @@ nixpkgs.lib.nixosSystem {
     home-manager.nixosModules.home-manager
     {
       nixpkgs.overlays = [
+        claude-code.overlays.default
         codex.overlays.default
         ctx-overlay
         nur.overlays.default
