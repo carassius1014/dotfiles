@@ -18,6 +18,8 @@ in
     coreutils-prefixed
     fd
     fontconfig
+    podman
+    podman-compose
   ];
 
   programs.zsh.enable = true;

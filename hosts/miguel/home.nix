@@ -19,6 +19,11 @@
     (import ../common/home/programs/zsh.nix { inherit pkgs; })
   ];
 
+  programs.zsh.shellAliases = {
+    docker = "podman";
+    docker-compose = "podman-compose";
+  };
+
   home =
     let
       commonPackages = import ../common/home/packages.nix { inherit pkgs; };
