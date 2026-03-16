@@ -25,6 +25,8 @@
     prisma-utils.url = "github:VanCoding/nix-prisma-utils";
 
     mac-app-util.url = "github:hraban/mac-app-util";
+
+    claude-code.url = "github:sadjow/claude-code-nix";
   };
 
   outputs = inputs: {
@@ -34,7 +36,10 @@
         pkgs = import inputs.nixpkgs {
           inherit system;
           config.allowUnfree = true;
-          overlays = [ (import ./hosts/common/overlays/context.nix) ];
+          overlays = [
+            (import ./hosts/common/overlays/context.nix)
+            inputs.claude-code.overlays.default
+          ];
         };
       in
       {
@@ -48,7 +53,10 @@
         pkgs = import inputs.nixpkgs {
           inherit system;
           config.allowUnfree = true;
-          overlays = [ (import ./hosts/common/overlays/context.nix) ];
+          overlays = [
+            (import ./hosts/common/overlays/context.nix)
+            inputs.claude-code.overlays.default
+          ];
         };
       in
       {
