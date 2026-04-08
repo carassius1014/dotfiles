@@ -18,7 +18,7 @@ let
 
     account="${gctx.me.name}"
     case "$path" in
-      herp-inc-hq/*) account="carassius_herpinc" ;;
+      herp-inc-hq/*|carassius_herpinc/*) account="carassius_herpinc" ;;
     esac
 
     token=$(${pkgs.gh}/bin/gh auth token --user "$account")

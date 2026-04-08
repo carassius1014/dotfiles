@@ -15,6 +15,10 @@ in
         condition = "gitdir:~/work/github.com/herp-inc-hq/";
         inherit contents;
       }
+      {
+        condition = "gitdir:~/work/github.com/carassius_herpinc/";
+        inherit contents;
+      }
     ];
   };
 }
