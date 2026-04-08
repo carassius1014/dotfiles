@@ -18,8 +18,9 @@ in
     coreutils-prefixed
     fd
     fontconfig
-    podman
-    podman-compose
+    colima
+    docker
+    docker-compose
   ];
 
   programs.zsh.enable = true;
