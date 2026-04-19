@@ -5,6 +5,7 @@
 (load! "config/flycheck")
 (load! "config/fonts")
 (load! "config/indents")
+(load! "config/just")
 (load! "config/keybinds")
 (load! "config/lsp")
 (load! "config/projectile")
