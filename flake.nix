@@ -26,6 +26,13 @@
 
     mac-app-util.url = "github:hraban/mac-app-util";
 
+    nix-homebrew.url = "github:zhaofengli/nix-homebrew";
+
+    homebrew-cask = {
+      url = "github:homebrew/homebrew-cask";
+      flake = false;
+    };
+
     claude-code.url = "github:sadjow/claude-code-nix";
 
     nix-doom-emacs-unstraightened = {

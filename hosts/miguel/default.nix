@@ -6,6 +6,8 @@
   codex,
   mac-app-util,
   nix-doom-emacs-unstraightened,
+  nix-homebrew,
+  homebrew-cask,
   ...
 }:
 
@@ -14,10 +16,12 @@ let
 in
 darwin.lib.darwinSystem {
   inherit system;
+  specialArgs = { inherit homebrew-cask; };
   modules = [
     ./configuration.nix
     mac-app-util.darwinModules.default
     home-manager.darwinModules.home-manager
+    nix-homebrew.darwinModules.nix-homebrew
     {
       nixpkgs.overlays = [
         codex.overlays.default

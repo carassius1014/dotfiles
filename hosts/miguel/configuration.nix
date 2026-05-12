@@ -2,6 +2,7 @@
   config,
   pkgs,
   lib,
+  homebrew-cask,
   ...
 }:
 
@@ -18,10 +19,21 @@ in
     coreutils-prefixed
     fd
     fontconfig
-    colima
-    docker
-    docker-compose
   ];
+
+  nix-homebrew = {
+    enable = true;
+    user = gctx.me.name;
+    taps = {
+      "homebrew/homebrew-cask" = homebrew-cask;
+    };
+    mutableTaps = false;
+  };
+
+  homebrew = {
+    enable = true;
+    casks = [ "docker-desktop" ];
+  };
 
   programs.zsh.enable = true;
   environment.shells = [ pkgs.zsh ];
@@ -46,6 +58,8 @@ in
   system.keyboard.remapCapsLockToEscape = true;
 
   ids.gids.nixbld = 350;
+
+  system.primaryUser = gctx.me.name;
 
   # Used for backwards compatibility, please read the changelog before changing.
   # $ darwin-rebuild changelog
