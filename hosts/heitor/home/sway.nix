@@ -48,7 +48,7 @@ in
           "${modifier}+Return" = "exec ${ctx.terminal}";
 
           # start launcher
-          "Ctrl+space" = "exec ${pkgs.rofi-wayland}/bin/rofi -show run";
+          "Ctrl+space" = "exec ${pkgs.rofi}/bin/rofi -show run";
 
           # change focus
           "${modifier}+${up}" = "focus up";

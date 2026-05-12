@@ -5,6 +5,7 @@
   home-manager,
   codex,
   mac-app-util,
+  nix-doom-emacs-unstraightened,
   ...
 }:
 
@@ -27,6 +28,7 @@ darwin.lib.darwinSystem {
       home-manager.users.${gctx.me.name} = import ./home.nix {
         inherit pkgs mac-app-util;
         codexHmModule = codex.homeModules.default;
+        doomEmacsHmModule = nix-doom-emacs-unstraightened.homeModule;
       };
     }
   ];

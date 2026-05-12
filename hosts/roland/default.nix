@@ -1,5 +1,6 @@
 {
   nixpkgs,
+  nix-doom-emacs-unstraightened,
   pkgs,
   system,
   home-manager,
@@ -17,7 +18,10 @@ nixpkgs.lib.nixosSystem {
     {
       home-manager.useGlobalPkgs = true;
       home-manager.useUserPackages = true;
-      home-manager.users.${gctx.me.name} = import ./home.nix { inherit pkgs; };
+      home-manager.users.${gctx.me.name} = import ./home.nix {
+        inherit pkgs;
+        doomEmacsHmModule = nix-doom-emacs-unstraightened.homeModule;
+      };
     }
   ];
 }

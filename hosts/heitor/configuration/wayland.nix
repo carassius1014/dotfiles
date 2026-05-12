@@ -14,7 +14,7 @@ in
     restart = false;
     settings = {
       default_session = {
-        command = "${lib.makeBinPath [ pkgs.greetd.tuigreet ]}/tuigreet --remember --time --cmd ${swayRun}";
+        command = "${lib.makeBinPath [ pkgs.tuigreet ]}/tuigreet --remember --time --cmd ${swayRun}";
         user = "greeter";
       };
       initial_session = {

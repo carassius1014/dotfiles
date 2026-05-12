@@ -13,7 +13,6 @@
       let
         paths = [
           "$HOME/.bun/bin"
-          "$HOME/.dotfiles/emacs.d/bin"
           "$HOME/.local/bin"
         ];
       in

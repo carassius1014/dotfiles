@@ -25,9 +25,6 @@
       # node
       set PATH ./node_modules/.bin $PATH
 
-      # doom emacs
-      set PATH $HOME/.emacs.d/bin $PATH
-
       # .local/bin
       set PATH $HOME/.local/bin $PATH
     '';

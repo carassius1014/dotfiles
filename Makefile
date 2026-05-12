@@ -8,10 +8,12 @@ nixos.rebuild.force:
 
 heitor.bump-up:
 	nix flake update \
+		claude-code \
 		codex \
 		home-manager \
 		nixpkgs \
 		nix-colors \
+		nix-doom-emacs-unstraightened \
 		nur \
 		prisma-utils
 
@@ -30,11 +32,6 @@ roland.rebuild:
 
 roland.rebuild.force:
 	@make host=roland nixos.rebuild.force
-
-doom.reinstall:
-	rm -rf emacs.d
-	git clone --depth 1 https://github.com/doomemacs/doomemacs emacs.d
-	doom install
 
 format:
 	git ls-files "*.nix" | xargs nix fmt

@@ -1,5 +1,6 @@
 {
   codexHmModule,
+  doomEmacsHmModule,
   pkgs,
   prisma-factory,
 }:
@@ -11,6 +12,7 @@ in
 {
   imports = [
     codexHmModule
+    doomEmacsHmModule
 
     ../common/home/codex.nix
     ../common/home/emacs.nix

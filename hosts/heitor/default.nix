@@ -3,6 +3,7 @@
   codex,
   home-manager,
   nix-colors,
+  nix-doom-emacs-unstraightened,
   nixpkgs,
   nur,
   pkgs,
@@ -37,6 +38,7 @@ nixpkgs.lib.nixosSystem {
         inherit pkgs;
         inherit (prisma-utils.lib) prisma-factory;
         codexHmModule = codex.homeModules.default;
+        doomEmacsHmModule = nix-doom-emacs-unstraightened.homeModule;
       };
     }
   ];

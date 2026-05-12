@@ -1,6 +1,7 @@
 {
   pkgs,
   codexHmModule,
+  doomEmacsHmModule,
   mac-app-util,
   ...
 }:
@@ -8,6 +9,7 @@
 {
   imports = [
     codexHmModule
+    doomEmacsHmModule
     mac-app-util.homeManagerModules.default
     ../common/home/codex.nix
     ../common/home/emacs.nix

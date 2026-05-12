@@ -6,7 +6,7 @@ in
 {
   programs.rofi = {
     enable = true;
-    package = pkgs.rofi-wayland;
+    package = pkgs.rofi;
     inherit (ctx) terminal;
     font = "${gctx.fonts.ui} 14";
 

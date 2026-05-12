@@ -1,9 +1,10 @@
 { pkgs, ... }:
 
 {
-  programs.emacs = {
+  programs.doom-emacs = {
     enable = true;
-    package = pkgs.emacs-pgtk;
+    doomDir = ../../../doom.d;
+    emacs = pkgs.emacs-pgtk;
     extraPackages = epkgs: [
       epkgs.treesit-grammars.with-all-grammars
     ];

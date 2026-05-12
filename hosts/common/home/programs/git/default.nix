@@ -29,13 +29,11 @@ in
 {
   programs.git = {
     enable = true;
-    userName = gctx.me.realName;
-    userEmail = gctx.me.email;
     ignores = [ ".direnv" ];
-    extraConfig = {
-      init = {
-        defaultBranch = "master";
-      };
+    settings = {
+      user.name = gctx.me.realName;
+      user.email = gctx.me.email;
+      init.defaultBranch = "master";
       credential."https://github.com" = {
         helper = "!${ghCredentialHelper}";
         useHttpPath = true;
