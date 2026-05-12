@@ -2,18 +2,18 @@
 
 with pkgs;
 [
-  bun
   black
+  bun
   cachix
   claude-code
   code-cursor
-  editorconfig-core-c
   dig
+  editorconfig-core-c
+  fd
+  fzf
   gnupg
   google-cloud-sdk
   graphviz
-  fd
-  fzf
   httpie
   ngrok
   nix-prefetch-git
@@ -21,6 +21,7 @@ with pkgs;
   p7zip
   poetry
   python3Minimal
+  python3Packages.grip
   ripgrep
   rlwrap
   saml2aws

@@ -1,10 +1,10 @@
 all:
 
 nixos.rebuild:
-	NIXPKGS_ALLOW_UNFREE=1 nixos-rebuild switch --use-remote-sudo --impure --flake .#${host}
+	NIXPKGS_ALLOW_UNFREE=1 nixos-rebuild switch --sudo --impure --flake .#${host}
 
 nixos.rebuild.force:
-	NIXPKGS_ALLOW_UNFREE=1 nixos-rebuild switch --use-remote-sudo --install-bootloader --impure --flake .#${host}
+	NIXPKGS_ALLOW_UNFREE=1 nixos-rebuild switch --sudo --install-bootloader --impure --flake .#${host}
 
 heitor.bump-up:
 	nix flake update \
