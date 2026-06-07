@@ -16,6 +16,7 @@
     ./configuration/network.nix
     ./configuration/packages.nix
     ./configuration/ssh.nix
+    ./configuration/steam.nix
     ./configuration/system.nix
     ./configuration/users.nix
     ./configuration/video.nix

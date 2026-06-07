@@ -9,7 +9,6 @@
     [
       adwaita-icon-theme
       libnotify
-      steam
       symbola
       xdg-utils
     ]
