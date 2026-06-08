@@ -57,6 +57,7 @@
        (javascript +lsp +tree-sitter)
        json
        latex
+       lean4
        markdown
        nix
        org
