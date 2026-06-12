@@ -56,7 +56,6 @@
       in
       {
         heitor = import ./hosts/heitor (inputs // { inherit pkgs system; });
-        roland = import ./hosts/roland (inputs // { inherit pkgs system; });
       };
 
     darwinConfigurations =

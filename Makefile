@@ -27,12 +27,6 @@ miguel.rebuild:
 	darwin-rebuild switch --flake .
 	rm -f ./result
 
-roland.rebuild:
-	@make host=roland nixos.rebuild
-
-roland.rebuild.force:
-	@make host=roland nixos.rebuild.force
-
 format:
 	git ls-files "*.nix" | xargs nix fmt
 	git ls-files "*.el" | xargs ./bin/format-elisp.sh
