@@ -1,7 +1,7 @@
 {
-  claude-code,
   codex,
   home-manager,
+  llm-agents,
   nix-colors,
   nix-doom-emacs-unstraightened,
   nixpkgs,
@@ -27,9 +27,9 @@ nixpkgs.lib.nixosSystem {
     home-manager.nixosModules.home-manager
     {
       nixpkgs.overlays = [
-        claude-code.overlays.default
         codex.overlays.default
         ctx-overlay
+        llm-agents.overlays.default
         nur.overlays.default
       ];
       home-manager.useGlobalPkgs = true;

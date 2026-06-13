@@ -33,7 +33,7 @@
       flake = false;
     };
 
-    claude-code.url = "github:sadjow/claude-code-nix";
+    llm-agents.url = "github:numtide/llm-agents.nix";
 
     nix-doom-emacs-unstraightened = {
       url = "github:marienz/nix-doom-emacs-unstraightened";
@@ -50,7 +50,7 @@
           config.allowUnfree = true;
           overlays = [
             (import ./hosts/common/overlays/context.nix)
-            inputs.claude-code.overlays.default
+            inputs.llm-agents.overlays.default
           ];
         };
       in
@@ -66,7 +66,7 @@
           config.allowUnfree = true;
           overlays = [
             (import ./hosts/common/overlays/context.nix)
-            inputs.claude-code.overlays.default
+            inputs.llm-agents.overlays.default
           ];
         };
       in

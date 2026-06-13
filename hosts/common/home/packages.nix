@@ -5,8 +5,6 @@ with pkgs;
   black
   bun
   cachix
-  claude-code
-  code-cursor
   dig
   editorconfig-core-c
   fd
@@ -15,6 +13,8 @@ with pkgs;
   google-cloud-sdk
   graphviz
   httpie
+  llm-agents.claude-code
+  llm-agents.cursor-agent
   ngrok
   nix-prefetch-git
   nodejs-slim

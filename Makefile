@@ -8,9 +8,9 @@ nixos.rebuild.force:
 
 heitor.bump-up:
 	nix flake update \
-		claude-code \
 		codex \
 		home-manager \
+		llm-agents \
 		nixpkgs \
 		nix-colors \
 		nix-doom-emacs-unstraightened \
