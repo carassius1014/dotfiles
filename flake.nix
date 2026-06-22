@@ -69,13 +69,6 @@
         };
       in
       {
-        GTPC22013 = import ./hosts/miguel (
-          inputs
-          // {
-            inherit pkgs system;
-            mac-app-util = inputs.mac-app-util;
-          }
-        );
         GTPC26001 = import ./hosts/miguel (
           inputs
           // {

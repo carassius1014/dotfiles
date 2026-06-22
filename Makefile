@@ -17,6 +17,14 @@ heitor.bump-up:
 		nur \
 		prisma-utils
 
+miguel.bump-up:
+	nix flake update \
+		darwin \
+		homebrew-cask \
+		mac-app-util \
+		nix-homebrew \
+		nixpkgs-darwin
+
 heitor.rebuild:
 	@make host=heitor nixos.rebuild
 
