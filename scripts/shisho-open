@@ -1,3 +1,0 @@
-#!/usr/bin/env fish
-
-open (shisho search | fzf | cut -d " " -f 1 | xargs shisho path) &> /dev/null

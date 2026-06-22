@@ -1,3 +1,0 @@
-#!/usr/bin/env fish
-
-shisho search | fzf | cut -d " " -f 1 | xargs shisho remove
