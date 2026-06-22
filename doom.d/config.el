@@ -12,3 +12,4 @@
 (load! "config/smartparens")
 (load! "config/themes")
 (load! "config/user")
+(load! "config/zig")
