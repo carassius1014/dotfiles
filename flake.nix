@@ -2,17 +2,17 @@
   description = "dotfiles";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-25.11";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-26.05";
 
     home-manager = {
-      url = "github:nix-community/home-manager/release-25.11";
+      url = "github:nix-community/home-manager/release-26.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    nixpkgs-darwin.url = "github:nixos/nixpkgs/nixpkgs-25.11-darwin";
+    nixpkgs-darwin.url = "github:nixos/nixpkgs/nixpkgs-26.05-darwin";
 
     darwin = {
-      url = "github:lnl7/nix-darwin/nix-darwin-25.11";
+      url = "github:lnl7/nix-darwin/nix-darwin-26.05";
       inputs.nixpkgs.follows = "nixpkgs-darwin";
     };
 
@@ -21,8 +21,6 @@
     codex.url = "github:herp-inc-hq/codex/release-25.11";
 
     nix-colors.url = "github:misterio77/nix-colors";
-
-    prisma-utils.url = "github:VanCoding/nix-prisma-utils";
 
     mac-app-util.url = "github:hraban/mac-app-util";
 

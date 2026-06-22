@@ -10,7 +10,6 @@
     libgccjit
     lsof
     lxqt.pavucontrol-qt
-    neofetch
     pciutils
     vim
   ];

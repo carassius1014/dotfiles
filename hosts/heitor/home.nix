@@ -2,12 +2,10 @@
   codexHmModule,
   doomEmacsHmModule,
   pkgs,
-  prisma-factory,
 }:
 
 let
   inherit (pkgs) gctx;
-  prisma = import ./packages/prisma.nix { inherit pkgs prisma-factory; };
 in
 {
   imports = [
@@ -23,7 +21,6 @@ in
 
     (import ../common/home/programs/zsh.nix {
       inherit pkgs;
-      inherit (prisma) shellHook;
     })
 
     ./home/fcitx5.nix

@@ -3,7 +3,6 @@
 with pkgs;
 [
   black
-  bun
   cachix
   dig
   editorconfig-core-c

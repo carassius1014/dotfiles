@@ -7,7 +7,6 @@
   nixpkgs,
   nur,
   pkgs,
-  prisma-utils,
   system,
   ...
 }:
@@ -28,6 +27,8 @@ nixpkgs.lib.nixosSystem {
     {
       nixpkgs.overlays = [
         codex.overlays.default
+        # codex pins nix_2_33, removed in nixpkgs 26.05; override to the successor
+        (_: prev: { nix = prev.nixVersions.nix_2_34; })
         ctx-overlay
         llm-agents.overlays.default
         nur.overlays.default
@@ -36,7 +37,6 @@ nixpkgs.lib.nixosSystem {
       home-manager.useUserPackages = true;
       home-manager.users.${gctx.me.name} = import ./home.nix {
         inherit pkgs;
-        inherit (prisma-utils.lib) prisma-factory;
         codexHmModule = codex.homeModules.default;
         doomEmacsHmModule = nix-doom-emacs-unstraightened.homeModule;
       };

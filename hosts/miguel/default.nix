@@ -25,6 +25,8 @@ darwin.lib.darwinSystem {
     {
       nixpkgs.overlays = [
         codex.overlays.default
+        # codex pins nix_2_33, removed in nixpkgs 26.05; override to the successor
+        (_: prev: { nix = prev.nixVersions.nix_2_34; })
       ];
       home-manager.useGlobalPkgs = true;
       home-manager.useUserPackages = true;

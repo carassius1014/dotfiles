@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, config, ... }:
 
 let
   packages = with pkgs.nur.repos.rycee.firefox-addons; [
@@ -9,6 +9,7 @@ in
 {
   programs.firefox = {
     enable = true;
+    configPath = "${config.xdg.configHome}/mozilla/firefox";
 
     policies = {
       DefaultDownloadDirectory = "\${home}/Downloads";

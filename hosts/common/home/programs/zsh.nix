@@ -12,7 +12,6 @@
     initContent =
       let
         paths = [
-          "$HOME/.bun/bin"
           "$HOME/.local/bin"
         ];
       in
