@@ -3,3 +3,4 @@
 
 (package! just-mode)
 (package! zig-mode)
+(package! rust-mode)

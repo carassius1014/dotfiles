@@ -9,6 +9,7 @@
 (load! "config/keybinds")
 (load! "config/lsp")
 (load! "config/projectile")
+(load! "config/rust")
 (load! "config/smartparens")
 (load! "config/themes")
 (load! "config/user")
