@@ -4,17 +4,21 @@ with pkgs;
 [
   black
   cachix
+  clang-tools
+  cloudflared
   dig
   editorconfig-core-c
   fd
   fzf
+  gcc
   gnupg
   google-cloud-sdk
   graphviz
   httpie
+  just
+  lean4
   llm-agents.claude-code
   llm-agents.cursor-agent
-  ngrok
   nix-prefetch-git
   nodejs-slim
   p7zip
@@ -30,9 +34,9 @@ with pkgs;
   taplo
   tree
   treefmt
-  typescript-language-server
   unrar
   unzip
+  watchexec
   whois
   yq-go
 ]
