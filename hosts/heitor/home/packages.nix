@@ -9,6 +9,7 @@
     [
       adwaita-icon-theme
       libnotify
+      simulide
       symbola
       xdg-utils
     ]
