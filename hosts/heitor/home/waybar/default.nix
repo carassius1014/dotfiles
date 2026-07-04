@@ -24,11 +24,19 @@ in
         modules-center = [ "sway/window" ];
         modules-right = [
           "tray"
+          "pulseaudio"
           "cpu"
           "temperature"
           "memory"
           "clock"
         ];
+
+        "pulseaudio" = {
+          format = "VOL {volume}% {icon}";
+          format-muted = "VOL muted ";
+          format-icons = [ "" "" "" ];
+          on-click = "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle";
+        };
 
         "sway/mode" = {
           format = ''<span style="italic">{}</span>'';

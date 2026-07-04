@@ -57,6 +57,7 @@ button:hover {
 #cpu,
 #memory,
 #temperature,
+#pulseaudio,
 #tray,
 #mode {
   padding: 0 10px;
