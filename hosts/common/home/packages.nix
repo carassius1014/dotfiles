@@ -38,5 +38,6 @@ with pkgs;
   unzip
   watchexec
   whois
+  valgrind
   yq-go
 ]
