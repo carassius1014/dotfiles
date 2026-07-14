@@ -23,7 +23,7 @@ with pkgs;
   nodejs-slim
   p7zip
   poetry
-  python3Minimal
+  python3
   python3Packages.grip
   ripgrep
   rlwrap
