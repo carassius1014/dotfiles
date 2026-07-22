@@ -34,7 +34,11 @@ in
         "pulseaudio" = {
           format = "VOL {volume}% {icon}";
           format-muted = "VOL muted ";
-          format-icons = [ "" "" "" ];
+          format-icons = [
+            ""
+            ""
+            ""
+          ];
           on-click = "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle";
         };
 
