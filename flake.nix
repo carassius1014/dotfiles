@@ -48,7 +48,7 @@
           config.allowUnfree = true;
           overlays = [
             (import ./hosts/common/overlays/context.nix)
-            inputs.llm-agents.overlays.default
+            inputs.llm-agents.overlays.shared-nixpkgs
           ];
         };
       in
@@ -64,7 +64,7 @@
           config.allowUnfree = true;
           overlays = [
             (import ./hosts/common/overlays/context.nix)
-            inputs.llm-agents.overlays.default
+            inputs.llm-agents.overlays.shared-nixpkgs
           ];
         };
       in

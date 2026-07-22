@@ -30,7 +30,7 @@ nixpkgs.lib.nixosSystem {
         # codex pins nix_2_33, removed in nixpkgs 26.05; override to the successor
         (_: prev: { nix = prev.nixVersions.nix_2_34; })
         ctx-overlay
-        llm-agents.overlays.default
+        llm-agents.overlays.shared-nixpkgs
         nur.overlays.default
       ];
       home-manager.useGlobalPkgs = true;
