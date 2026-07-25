@@ -13,6 +13,7 @@
     mac-app-util.homeManagerModules.default
     ../common/home/codex.nix
     ../common/home/emacs.nix
+    ../common/home/haskell.nix
     ../common/home/programs
     ../common/home/programs/direnv.nix
     ../common/home/programs/gh.nix

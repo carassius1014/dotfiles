@@ -14,6 +14,7 @@ in
 
     ../common/home/codex.nix
     ../common/home/emacs.nix
+    ../common/home/haskell.nix
     ../common/home/programs
     ../common/home/programs/direnv.nix
     ../common/home/programs/git

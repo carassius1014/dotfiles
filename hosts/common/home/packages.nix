@@ -41,3 +41,4 @@ with pkgs;
   valgrind
   yq-go
 ]
+++ import ./packages/haskell.nix { inherit pkgs; }
