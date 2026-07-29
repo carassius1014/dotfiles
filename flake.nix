@@ -20,6 +20,9 @@
 
     codex.url = "github:herp-inc-hq/codex/release-25.11";
 
+    # tricorder pins its own nixpkgs/haskell.nix; don't follow, or its binary cache misses.
+    tricorder.url = "github:tweag/tricorder";
+
     nix-colors.url = "github:misterio77/nix-colors";
 
     mac-app-util.url = "github:hraban/mac-app-util";

@@ -1,6 +1,7 @@
 {
   codexHmModule,
   doomEmacsHmModule,
+  tricorderHmModule,
   pkgs,
 }:
 
@@ -11,6 +12,7 @@ in
   imports = [
     codexHmModule
     doomEmacsHmModule
+    tricorderHmModule
 
     ../common/home/codex.nix
     ../common/home/emacs.nix
@@ -34,6 +36,8 @@ in
     ./home/sway.nix
     ./home/waybar
   ];
+
+  programs.tricorder.enable = true;
 
   home = {
     username = gctx.me.name;

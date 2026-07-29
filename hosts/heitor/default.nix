@@ -8,6 +8,7 @@
   nur,
   pkgs,
   system,
+  tricorder,
   ...
 }:
 
@@ -32,6 +33,7 @@ nixpkgs.lib.nixosSystem {
         ctx-overlay
         llm-agents.overlays.shared-nixpkgs
         nur.overlays.default
+        tricorder.overlays.default
       ];
       home-manager.useGlobalPkgs = true;
       home-manager.useUserPackages = true;
@@ -39,6 +41,7 @@ nixpkgs.lib.nixosSystem {
         inherit pkgs;
         codexHmModule = codex.homeModules.default;
         doomEmacsHmModule = nix-doom-emacs-unstraightened.homeModule;
+        tricorderHmModule = tricorder.homeManagerModules.default;
       };
     }
   ];

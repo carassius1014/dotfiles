@@ -15,7 +15,8 @@ heitor.bump-up:
 		nix-colors \
 		nix-doom-emacs-unstraightened \
 		nur \
-		prisma-utils
+		prisma-utils \
+		tricorder
 
 miguel.bump-up:
 	nix flake update \
