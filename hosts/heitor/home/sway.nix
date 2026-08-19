@@ -45,7 +45,8 @@ in
 
         keybindings = {
           # start a terminal
-          "${modifier}+Return" = "exec ${ctx.terminal}";
+          "${modifier}+Return" = "splith; exec ${ctx.terminal}";
+          "${modifier}+Shift+Return" = "splitv; exec ${ctx.terminal}";
 
           # start launcher
           "Ctrl+space" = "exec ${pkgs.rofi}/bin/rofi -show run";
