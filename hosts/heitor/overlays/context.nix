@@ -5,7 +5,7 @@ self: super: {
   ctx = {
     monitors = {
       eizo-EV2455 = "DP-3";
-      dell-U2720QM = "HDMI-A-1";
+      dell-U2720QM = "DP-1";
     };
 
     terminal = "${self.kitty}/bin/kitty";
